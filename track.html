@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Choose Us - Two Column Layout</title>
+
+<style>
+
+
+.scontainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============================================
+   WHY CHOOSE US SECTION
+   ============================================ */
+.swhy-section {
+  padding: 80px 40px;
+}
+
+.swhy-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.swhy-title h2 {
+  font-size: 48px;
+  color: #1a3d5c;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.swhy-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #ff9500;
+  border-radius: 2px;
+}
+
+.swhy-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ============================================
+   LEFT COLUMN - FEATURES LIST
+   ============================================ */
+.sfeatures-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sfeature-item {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.sfeature-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.sfeature-icon {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sfeature-item:nth-child(1) .sfeature-icon {
+  background: #e3f2fd;
+}
+
+.sfeature-item:nth-child(2) .sfeature-icon {
+  background: #f3e5f5;
+}
+
+.sfeature-item:nth-child(3) .sfeature-icon {
+  background: #ffebee;
+}
+
+.sfeature-item:nth-child(4) .sfeature-icon {
+  background: #e8f5e9;
+}
+
+.sfeature-item:hover .sfeature-icon {
+  transform: scale(1.1);
+}
+
+.sfeature-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a3d5c;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.sfeature-content p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #888;
+}
+
+/* ============================================
+   RIGHT COLUMN - IMAGE CONTAINER
+   ============================================ */
+.simage-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.simage-container {
+  width: 100%;
+  aspect-ratio: 1;
+  border: 4px solid #2196f3;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #f5f5f5;
+  box-shadow: 0 10px 40px rgba(33, 150, 243, 0.2);
+}
+
+.simage-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.simage-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  color: #ddd;
+}
+
+/* ============================================
+   RESPONSIVE: 1920px+ (EXTRA LARGE)
+   ============================================ */
+@media (min-width: 1920px) {
+  .swhy-section {
+    padding: 100px 60px;
+  }
+
+  .swhy-title h2 {
+    font-size: 56px;
+  }
+
+  .swhy-wrapper {
+    gap: 80px;
+  }
+
+  .sfeature-item {
+    padding: 28px;
+    gap: 24px;
+  }
+
+  .sfeature-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 36px;
+  }
+
+  .sfeature-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .sfeature-content p {
+    font-size: 14px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE: 1200px - 1919px (LARGE DESKTOP)
+   ============================================ */
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .swhy-section {
+    padding: 80px 40px;
+  }
+
+  .swhy-title h2 {
+    font-size: 48px;
+  }
+
+  .swhy-wrapper {
+    gap: 60px;
+  }
+
+  .sfeature-item {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .sfeature-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+  }
+
+  .sfeature-content h3 {
+    font-size: 18px;
+  }
+
+  .sfeature-content p {
+    font-size: 13px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE: 992px - 1199px (MEDIUM DESKTOP)
+   ============================================ */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .swhy-section {
+    padding: 60px 30px;
+  }
+
+  .swhy-title {
+    margin-bottom: 50px;
+  }
+
+  .swhy-title h2 {
+    font-size: 40px;
+  }
+
+  .swhy-title h2::after {
+    width: 50px;
+  }
+
+  .swhy-wrapper {
+    gap: 40px;
+  }
+
+  .sfeatures-list {
+    gap: 20px;
+  }
+
+  .sfeature-item {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .sfeature-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 28px;
+  }
+
+  .sfeature-content h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .sfeature-content p {
+    font-size: 12px;
+  }
+
+  .simage-container {
+    border-width: 3px;
+    border-radius: 20px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE: 768px - 991px (TABLET LANDSCAPE)
+   ============================================ */
+@media (min-width: 768px) and (max-width: 991px) {
+  .swhy-section {
+    padding: 50px 25px;
+  }
+
+  .swhy-title {
+    margin-bottom: 40px;
+  }
+
+  .swhy-title h2 {
+    font-size: 36px;
+  }
+
+  .swhy-title h2::after {
+    width: 45px;
+  }
+
+  .swhy-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .sfeatures-list {
+    gap: 18px;
+  }
+
+  .sfeature-item {
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .sfeature-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .sfeature-content h3 {
+    font-size: 15px;
+  }
+
+  .sfeature-content p {
+    font-size: 12px;
+  }
+
+  .simage-container {
+    border-width: 3px;
+    border-radius: 16px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE: 576px - 767px (TABLET PORTRAIT)
+   ============================================ */
+@media (min-width: 576px) and (max-width: 767px) {
+  .swhy-section {
+    padding: 40px 20px;
+  }
+
+  .swhy-title {
+    margin-bottom: 35px;
+  }
+
+  .swhy-title h2 {
+    font-size: 32px;
+  }
+
+  .swhy-title h2::after {
+    width: 40px;
+  }
+
+  .swhy-wrapper {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .sfeatures-list {
+    gap: 16px;
+  }
+
+  .sfeature-item {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .sfeature-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+
+  .sfeature-content h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .sfeature-content p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .simage-container {
+    border-width: 2px;
+    border-radius: 14px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE: 480px - 575px (LARGE MOBILE)
+   ============================================ */
+@media (min-width: 480px) and (max-width: 575px) {
+ 
+
+  .scontainer {
+    padding: 0 15px;
+  }
+
+  .swhy-section {
+    padding: 35px 18px;
+  }
+
+  .swhy-title {
+    margin-bottom: 30px;
+  }
+
+  .swhy-title h2 {
+    font-size: 28px;
+  }
+
+  .swhy-title h2::after {
+    width: 35px;
+  }
+
+  .swhy-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .sfeatures-list {
+    gap: 14px;
+  }
+
+  .sfeature-item {
+    padding: 14px;
+    gap: 12px;
+    border-radius: 10px;
+  }
+
+  .sfeature-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    border-radius: 6px;
+  }
+
+  .sfeature-content h3 {
+    font-size: 13px;
+  }
+
+  .sfeature-content p {
+    font-size: 10px;
+  }
+
+  .simage-container {
+    border-width: 2px;
+    border-radius: 12px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE: 375px - 479px (SMALL MOBILE)
+   ============================================ */
+@media (min-width: 375px) and (max-width: 479px) {
+ 
+
+  .scontainer {
+    padding: 0 12px;
+  }
+
+  .swhy-section {
+    padding: 30px 16px;
+  }
+
+  .swhy-title {
+    margin-bottom: 25px;
+  }
+
+  .swhy-title h2 {
+    font-size: 24px;
+  }
+
+  .swhy-title h2::after {
+    width: 30px;
+  }
+
+  .swhy-wrapper {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .sfeatures-list {
+    gap: 12px;
+  }
+
+  .sfeature-item {
+    padding: 12px;
+    gap: 10px;
+    border-radius: 8px;
+  }
+
+  .sfeature-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+    border-radius: 6px;
+  }
+
+  .sfeature-content h3 {
+    font-size: 12px;
+  }
+
+  .sfeature-content p {
+    font-size: 10px;
+  }
+
+  .simage-container {
+    border-width: 2px;
+    border-radius: 10px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE: Under 375px (EXTRA SMALL MOBILE)
+   ============================================ */
+@media (max-width: 374px) {
+ 
+
+  .scontainer {
+    padding: 0 10px;
+  }
+
+  .swhy-section {
+    padding: 25px 14px;
+  }
+
+  .swhy-title {
+    margin-bottom: 20px;
+  }
+
+  .swhy-title h2 {
+    font-size: 20px;
+  }
+
+  .swhy-title h2::after {
+    width: 25px;
+    bottom: -10px;
+  }
+
+  .swhy-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .sfeatures-list {
+    gap: 10px;
+  }
+
+  .sfeature-item {
+    padding: 11px;
+    gap: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .sfeature-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+
+  .sfeature-content h3 {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+
+  .sfeature-content p {
+    font-size: 9px;
+    line-height: 1.4;
+  }
+
+  .simage-container {
+    border-width: 2px;
+    border-radius: 8px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="scontainer">
+
+  <!-- ============================================
+       WHY CHOOSE US SECTION
+       ============================================ -->
+  <section class="swhy-section">
+    
+    <!-- Title -->
+    <div class="swhy-title">
+      <h2>Why Choose Us?</h2>
+    </div>
+
+    <!-- Main Wrapper -->
+    <div class="swhy-wrapper">
+
+      <!-- Left Column - Features List -->
+      <div class="sfeatures-list">
+
+        <!-- Feature Item 1 -->
+        <div class="sfeature-item">
+          <div class="sfeature-icon">⏱️</div>
+          <div class="sfeature-content">
+            <h3>Less Time in the Chair</h3>
+            <p>Justo non dolor lectus ac egestas dictum. Leo tempus nec amet fringilla. Eu semper velit tristique semper. Laoreet mi lacus nisl diam in.</p>
+          </div>
+        </div>
+
+        <!-- Feature Item 2 -->
+        <div class="sfeature-item">
+          <div class="sfeature-icon">⚡</div>
+          <div class="sfeature-content">
+            <h3>More Efficient</h3>
+            <p>Justo non dolor lectus ac egestas dictum. Leo tempus nec amet fringilla. Eu semper velit tristique semper. Laoreet mi lacus nisl diam in.</p>
+          </div>
+        </div>
+
+        <!-- Feature Item 3 -->
+        <div class="sfeature-item">
+          <div class="sfeature-icon">⏳</div>
+          <div class="sfeature-content">
+            <h3>Longer Lasting</h3>
+            <p>Justo non dolor lectus ac egestas dictum. Leo tempus nec amet fringilla. Eu semper velit tristique semper. Laoreet mi lacus nisl diam in.</p>
+          </div>
+        </div>
+
+        <!-- Feature Item 4 -->
+        <div class="sfeature-item">
+          <div class="sfeature-icon">😊</div>
+          <div class="sfeature-content">
+            <h3>More Comfortable Experience</h3>
+            <p>Justo non dolor lectus ac egestas dictum. Leo tempus nec amet fringilla. Eu semper velit tristique semper. Laoreet mi lacus nisl diam in.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column - Image Container -->
+      <div class="simage-wrapper">
+        <div class="simage-container">
+          <div class="simage-placeholder">📷</div>
+          <!-- To add your image, replace placeholder with:
+          <img src="your-image.jpg" alt="Why Choose Us">
+          -->
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>LogiXpress - Our Team</title>
+    <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="LogiXpress - Transportation, Cargo & Logistics HTML Template" name="description">
+    
+    <!-- CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/coloring.css" rel="stylesheet" type="text/css">
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    
+    <!-- External Libraries -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"> -->
+
+    <style>
+        /* ============================================
+           GLOBAL STYLES
+           ============================================ */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 2300px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* ============================================
+           TEAM SECTION - BASE STYLES (MOBILE FIRST)
+           ============================================ */
+
+        .team-section {
+            background: linear-gradient(135deg, #f9f9f9 0%, #f5f5f5 100%);
+            padding: 40px 0;
+            width: 100%;
+        }
+
+        .team-container {
+            max-width: 2300px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            position: relative;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Team Swiper Container */
+        .team-swiper {
+            padding: 15px 0 30px 0;
+            position: relative;
+            width: 100%;
+        }
+
+        .swiper-slide {
+            height: auto;
+            display: flex;
+            align-items: stretch;
+            padding: 5px;
+        }
+
+        /* ============================================
+           TEAM CARD STYLES
+           ============================================ */
+
+        .team-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+        }
+
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.35s ease;
+            z-index: 1;
+        }
+
+        .team-card:hover {
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+            transform: translateY(-8px);
+        }
+
+        .team-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .team-card img {
+            width: 100%;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+            border-radius: 10px 10px 0 0;
+            transition: transform 0.35s ease;
+        }
+
+        .team-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .team-card h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 3px;
+            margin-top: 12px;
+            letter-spacing: 0.2px;
+        }
+
+        .team-card p {
+            color: #666;
+            font-size: 11px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            font-weight: 600;
+        }
+
+        /* ============================================
+           SOCIAL ICONS
+           ============================================ */
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-top: auto;
+            padding-bottom: 8px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 11px;
+            border: 1.5px solid transparent;
+        }
+
+        .social-icons a:hover {
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            color: white;
+            transform: scale(1.15) translateY(-2px);
+            border-color: #ff6b6b;
+        }
+
+        /* ============================================
+           SWIPER NAVIGATION BUTTONS
+           ============================================ */
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            background-color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            color: #333;
+            transition: all 0.3s ease;
+            border: 1.5px solid #f0f0f0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-50%) scale(1.08);
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .swiper-button-next.swiper-button-disabled,
+        .swiper-button-prev.swiper-button-disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .swiper-button-next {
+            right: 10px;
+        }
+
+        .swiper-button-prev {
+            left: 10px;
+        }
+
+        /* ============================================
+           SWIPER PAGINATION
+           ============================================ */
+
+        .swiper-pagination {
+            position: relative;
+            margin-top: 25px;
+            bottom: auto;
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: #ddd;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .swiper-pagination-bullet:hover {
+            background-color: #999;
+            opacity: 1;
+            transform: scale(1.15);
+        }
+
+        .swiper-pagination-bullet-active {
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            opacity: 1;
+            width: 24px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+
+        @media (min-width: 360px) {
+            .team-section { padding: 40px 0; }
+            .section-title { font-size: 24px; margin-bottom: 20px; }
+            .team-card h4 { font-size: 14px; }
+            .team-card p { font-size: 11px; }
+        }
+
+        @media (min-width: 480px) {
+            .team-section { padding: 45px 0; }
+            .section-title { font-size: 26px; margin-bottom: 25px; }
+            .section-title::after { width: 70px; margin-top: 12px; }
+            .team-swiper { padding: 18px 0 35px 0; }
+            .swiper-slide { padding: 6px; }
+            .team-card h4 { font-size: 15px; margin-top: 13px; }
+            .team-card p { font-size: 12px; }
+            .social-icons a { width: 30px; height: 30px; font-size: 12px; }
+        }
+
+        @media (min-width: 640px) {
+            .team-section { padding: 50px 0; }
+            .section-title { font-size: 28px; margin-bottom: 28px; }
+            .section-title::after { width: 75px; }
+            .team-swiper { padding: 20px 0 38px 0; }
+            .swiper-slide { padding: 7px; }
+            .team-card h4 { font-size: 16px; margin-top: 14px; }
+            .team-card p { font-size: 12px; }
+            .social-icons { gap: 7px; }
+            .social-icons a { width: 32px; height: 32px; font-size: 13px; }
+            .swiper-button-next, .swiper-button-prev { width: 40px; height: 40px; }
+            .swiper-button-next::after, .swiper-button-prev::after { font-size: 15px; }
+        }
+
+        @media (min-width: 768px) {
+            .team-section { padding: 55px 0; }
+            .section-title { font-size: 32px; margin-bottom: 32px; }
+            .section-title::after { width: 80px; height: 4px; }
+            .team-swiper { padding: 22px 0 42px 0; }
+            .swiper-slide { padding: 8px; }
+            .team-card h4 { font-size: 17px; margin-top: 15px; margin-bottom: 4px; }
+            .team-card p { font-size: 13px; margin-bottom: 12px; }
+            .social-icons { gap: 8px; }
+            .social-icons a { width: 34px; height: 34px; font-size: 14px; }
+            .swiper-button-next, .swiper-button-prev { width: 42px; height: 42px; }
+            .swiper-button-next::after, .swiper-button-prev::after { font-size: 16px; }
+        }
+
+        @media (min-width: 1024px) {
+            .team-section { padding: 65px 0; }
+            .section-title { font-size: 36px; margin-bottom: 40px; }
+            .section-title::after { width: 85px; height: 4px; margin-top: 15px; }
+            .team-swiper { padding: 25px 0 45px 0; }
+            .swiper-slide { padding: 10px; }
+            .team-card h4 { font-size: 18px; margin-top: 16px; margin-bottom: 5px; }
+            .team-card p { font-size: 14px; margin-bottom: 14px; }
+            .social-icons { gap: 9px; padding-bottom: 10px; }
+            .social-icons a { width: 36px; height: 36px; font-size: 15px; }
+            .swiper-button-next, .swiper-button-prev { width: 45px; height: 45px; }
+            .swiper-button-next::after, .swiper-button-prev::after { font-size: 17px; }
+        }
+
+        @media (min-width: 1280px) {
+            .team-section { padding: 70px 0; }
+            .section-title { font-size: 40px; margin-bottom: 45px; }
+            .section-title::after { width: 90px; margin-top: 18px; }
+            .team-swiper { padding: 28px 0 48px 0; }
+            .swiper-slide { padding: 11px; }
+            .team-card h4 { font-size: 19px; margin-top: 18px; margin-bottom: 6px; }
+            .team-card p { font-size: 14px; margin-bottom: 15px; }
+            .social-icons { gap: 10px; padding-bottom: 11px; }
+            .social-icons a { width: 38px; height: 38px; font-size: 16px; }
+            .swiper-button-next, .swiper-button-prev { width: 48px; height: 48px; }
+            .swiper-button-next::after, .swiper-button-prev::after { font-size: 18px; }
+        }
+
+        @media (min-width: 1440px) {
+            .team-section { padding: 75px 0; }
+            .section-title { font-size: 42px; margin-bottom: 50px; }
+            .section-title::after { width: 95px; margin-top: 20px; }
+            .team-swiper { padding: 30px 0 50px 0; }
+            .swiper-slide { padding: 12px; }
+            .team-card h4 { font-size: 20px; margin-top: 20px; margin-bottom: 7px; }
+            .team-card p { font-size: 15px; margin-bottom: 16px; }
+            .social-icons { gap: 11px; padding-bottom: 12px; }
+            .social-icons a { width: 40px; height: 40px; font-size: 17px; }
+            .swiper-button-next, .swiper-button-prev { width: 50px; height: 50px; }
+            .swiper-button-next::after, .swiper-button-prev::after { font-size: 19px; }
+        }
+
+        @media (min-width: 1920px) {
+            .team-section { padding: 80px 0; }
+            .section-title { font-size: 48px; margin-bottom: 55px; }
+            .section-title::after { width: 100px; height: 5px; margin-top: 22px; }
+            .team-swiper { padding: 32px 0 55px 0; }
+            .swiper-slide { padding: 13px; }
+            .team-card h4 { font-size: 22px; margin-top: 22px; margin-bottom: 8px; }
+            .team-card p { font-size: 16px; margin-bottom: 18px; }
+            .social-icons { gap: 12px; padding-bottom: 13px; }
+            .social-icons a { width: 42px; height: 42px; font-size: 18px; }
+            .swiper-button-next, .swiper-button-prev { width: 52px; height: 52px; }
+            .swiper-button-next::after, .swiper-button-prev::after { font-size: 20px; }
+        }
+
+        @media (min-width: 2560px) {
+            .team-section { padding: 100px 0; }
+            .section-title { font-size: 52px; margin-bottom: 65px; }
+            .section-title::after { width: 110px; height: 5px; margin-top: 25px; }
+            .team-swiper { padding: 35px 0 60px 0; }
+            .swiper-slide { padding: 15px; }
+            .team-card h4 { font-size: 24px; margin-top: 25px; margin-bottom: 10px; }
+            .team-card p { font-size: 18px; margin-bottom: 20px; }
+            .social-icons { gap: 14px; padding-bottom: 15px; }
+            .social-icons a { width: 46px; height: 46px; font-size: 20px; }
+            .swiper-button-next, .swiper-button-prev { width: 56px; height: 56px; }
+            .swiper-button-next::after, .swiper-button-prev::after { font-size: 22px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- header begin -->
+         <header class="transparent scroll-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex sm-pt10">
+                            <div class="de-flex-col">
+                                <!-- logo begin -->
+                                <div id="logo">
+                                    <a href="index.html">
+                                        <img class="logo-main" src="images/logo/fuze_white.webp" alt="" >
+                                        <img class="logo-scroll" src="images/logo/fuze_logo_web-black.webp" alt="" >
+                                        <img class="logo-mobile" src="images/logo/fuze_white.webp" alt="" >
+                                    </a>
+                                </div>
+                                <!-- logo end -->
+                            </div>
+                            <div class="de-flex-col header-col-mid">
+                                <!-- mainemenu begin -->
+                                <ul id="mainmenu">
+                                    <li><a class="menu-item" href="index.html">Home</a>
+                                        <!-- <ul class="mega">
+                                            <li>
+                                                <div class="container">
+                                                    <div class="sb-menu p-4">
+                                                        <div class="row g-3">
+                                                            <div class="col-lg-4 col-md-6 text-center">
+                                                                <div class="relative hover text-center overflow-hidden rounded-1">
+                                                                    <img src="images/demo/homepage-1.webp" class="w-100 relative hover-scale-1-1" alt="">
+
+                                                                    <div class="abs abs-centered w-70 z-2 hover-op-1">
+                                                                        <a class="btn-main mb-2" href="index.html">Multipage</a>
+                                                                        <a class="btn-main" href="index-onepage.html">One Page</a>
+                                                                    </div>
+                                                                    <div class="hover-op-05 abs abs-centered bg-dark w-100 h-100 z-1"></div>
+                                                                </div>
+                                                                <h5 class="mt-2 mb-0">Logistic</h5>
+                                                            </div>
+
+                                                            <div class="col-lg-4 col-md-6 text-center">
+                                                                <div class="relative hover text-center overflow-hidden rounded-1">
+                                                                    <img src="images/demo/homepage-2.webp" class="w-100 relative hover-scale-1-1" alt="">
+
+                                                                    <div class="abs abs-centered w-70 z-2 hover-op-1">
+                                                                        <a class="btn-main mb-2" href="index-ship-freight.html">Multipage</a>
+                                                                        <a class="btn-main" href="index-ship-freight-onepage.html">One Page</a>
+                                                                    </div>
+                                                                    <div class="hover-op-05 abs abs-centered bg-dark w-100 h-100 z-1"></div>
+                                                                </div>
+                                                                <h5 class="mt-2 mb-0">Ship Freight</h5>
+                                                            </div>
+
+                                                            <div class="col-lg-4 col-md-6 text-center">
+                                                                <div class="relative hover text-center overflow-hidden rounded-1">
+                                                                    <img src="images/demo/homepage-3.webp" class="w-100 relative hover-scale-1-1" alt="">
+
+                                                                    <div class="abs abs-centered w-70 z-2 hover-op-1">
+                                                                        <a class="btn-main mb-2" href="index-air-freight.html">Multipage</a>
+                                                                        <a class="btn-main" href="index-air-freight-onepage.html">One Page</a>
+                                                                    </div>
+                                                                    <div class="hover-op-05 abs abs-centered bg-dark w-100 h-100 z-1"></div>
+                                                                </div>
+                                                                <h5 class="mt-2 mb-0">Air Freight</h5>
+                                                            </div>
+
+                                                            <div class="col-lg-4 col-md-6 text-center">
+                                                                <div class="relative hover text-center overflow-hidden rounded-1">
+                                                                    <img src="images/demo/homepage-4.webp" class="w-100 relative hover-scale-1-1" alt="">
+
+                                                                    <div class="abs abs-centered w-70 z-2 hover-op-1">
+                                                                        <a class="btn-main mb-2" href="index-truck-freight.html">Multipage</a>
+                                                                        <a class="btn-main" href="index-truck-freight-onepage.html">One Page</a>
+                                                                    </div>
+                                                                    <div class="hover-op-05 abs abs-centered bg-dark w-100 h-100 z-1"></div>
+                                                                </div>
+                                                                <h5 class="mt-2 mb-0">Truck Freight</h5>
+                                                            </div>
+
+                                                            <div class="col-lg-4 col-md-6 text-center">
+                                                                <div class="relative hover text-center overflow-hidden rounded-1">
+                                                                    <img src="images/demo/homepage-5.webp" class="w-100 relative hover-scale-1-1" alt="">
+
+                                                                    <div class="abs abs-centered w-70 z-2 hover-op-1">
+                                                                        <a class="btn-main mb-2" href="index-warehouse.html">Multipage</a>
+                                                                        <a class="btn-main" href="index-warehouse-onepage.html">One Page</a>
+                                                                    </div>
+                                                                    <div class="hover-op-05 abs abs-centered bg-dark w-100 h-100 z-1"></div>
+                                                                </div>
+                                                                <h5 class="mt-2 mb-0">Warehouse</h5>
+                                                            </div>
+
+                                                            <div class="col-lg-4 col-md-6 text-center">
+                                                                <div class="relative hover text-center overflow-hidden rounded-1">
+                                                                    <img src="images/demo/homepage-6.webp" class="w-100 relative hover-scale-1-1" alt="">
+
+                                                                    <div class="abs abs-centered w-70 z-2 hover-op-1">
+                                                                        <a class="btn-main mb-2" href="index-moving-company.html">Multipage</a>
+                                                                        <a class="btn-main" href="index-moving-company-onepage.html">One Page</a>
+                                                                    </div>
+                                                                    <div class="hover-op-05 abs abs-centered bg-dark w-100 h-100 z-1"></div>
+                                                                </div>
+                                                                <h5 class="mt-2 mb-0">Moving Service</h5>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul> -->
+                                    </li>
+                                    <li><a class="menu-item" href="./products.html">Products</a>
+                                        <!-- <ul>
+                                            <li><a href="services.html">Services 1</a></li>
+                                            <li><a href="services-2.html">Services 2</a></li>
+                                            <li><a href="service-single.html">Service Single</a></li>
+                                        </ul> -->
+                                    </li>
+                                    <li><a class="menu-item" href="#">Company</a>
+                                        <ul>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <!-- <li><a href="team.html">Our Team</a></li> -->
+                                            <li><a href="certifications.html">Certifications</a></li>
+                                            <li><a href="careers.html">Careers</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- <li><a class="menu-item" href="#">Pages</a>
+                                        <ul>
+                                            <li><a href="track.html">Track Your Package</a></li>                                    
+                                            <li><a href="booking.html">Book Shipment</a></li>
+                                            <li><a href="faq.html">FAQ</a></li>
+                                            <li><a href="testimonials.html">Testimonials</a></li>
+                                        </ul>
+                                    </li> -->
+                                    <li><a class="menu-item" href="blog.html">Blog</a></li>
+                                    <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                </ul>
+                                <!-- mainmenu end -->
+                            </div>
+                            <div class="de-flex-col">
+                                <div class="menu_side_area">
+                                    <!-- <a href="booking.html" class="btn-main fx-slide"><span>Book Shipment</span></a> -->
+                                    <span id="menu-btn"></span>
+                                </div>
+
+                                <div id="btn-extra">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+
+            <!-- Subheader Section -->
+            <!-- <section id="subheader" class="text-light sm-mt-90 relative rounded-1 overflow-hidden m-3" data-bgimage="url(images/background/3.webp) center">
+                <div class="container relative z-2">
+                    <div class="row gy-4 gx-5 align-items-center">
+                        <div class="col-lg-12">
+                            <h1>Our Team</h1>
+                            <ul class="crumb">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active">Our Team</li>
+                            </ul>   
+                        </div>
+                    </div>
+                </div>
+                <div class="gradient-edge-bottom color op-7 h-80"></div>
+                <div class="sw-overlay op-7"></div>
+            </section> -->
+
+            <!-- Team Section with Swiper Carousel -->
+            <section class="team-section">
+                <div class="team-container">
+                    <h2 class="section-title">Meet Our Expert Team</h2>
+                    
+                    <!-- Swiper Container -->
+                    <div class="swiper team-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1: Thomas Bennett -->
+                            <div class="swiper-slide">
+                                <div class="team-card">
+                                    <img src="images/team/1.webp" alt="Thomas Bennett">
+                                    <div class="p-3 text-center">
+                                        <h4 class="mb-0">Thomas Bennett</h4>
+                                        <p class="mb-2">Logistics Coordinator</p>
+                                        <div class="social-icons">
+                                            <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                            <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2: Barbara Charline -->
+                            <div class="swiper-slide">
+                                <div class="team-card">
+                                    <img src="images/team/2.webp" alt="Barbara Charline">
+                                    <div class="p-3 text-center">
+                                        <h4 class="mb-0">Barbara Charline</h4>
+                                        <p class="mb-2">Fleet Manager</p>
+                                        <div class="social-icons">
+                                            <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                            <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3: Madison Jane -->
+                            <div class="swiper-slide">
+                                <div class="team-card">
+                                    <img src="images/team/3.webp" alt="Madison Jane">
+                                    <div class="p-3 text-center">
+                                        <h4 class="mb-0">Madison Jane</h4>
+                                        <p class="mb-2">Air Freight Specialist</p>
+                                        <div class="social-icons">
+                                            <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                            <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4: Joshua Henry -->
+                            <div class="swiper-slide">
+                                <div class="team-card">
+                                    <img src="images/team/4.webp" alt="Joshua Henry">
+                                    <div class="p-3 text-center">
+                                        <h4 class="mb-0">Joshua Henry</h4>
+                                        <p class="mb-2">Customs Brokerage Officer</p>
+                                        <div class="social-icons">
+                                            <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                            <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 5: Daniel Cruz -->
+                            <div class="swiper-slide">
+                                <div class="team-card">
+                                    <img src="images/team/5.webp" alt="Daniel Cruz">
+                                    <div class="p-3 text-center">
+                                        <h4 class="mb-0">Daniel Cruz</h4>
+                                        <p class="mb-2">Ship Freight Manager</p>
+                                        <div class="social-icons">
+                                            <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                            <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 6: Sophia Turner -->
+                            <div class="swiper-slide">
+                                <div class="team-card">
+                                    <img src="images/team/6.webp" alt="Sophia Turner">
+                                    <div class="p-3 text-center">
+                                        <h4 class="mb-0">Sophia Turner</h4>
+                                        <p class="mb-2">Rail Freight Supervisor</p>
+                                        <div class="social-icons">
+                                            <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                            <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 7: Patrick Williams -->
+                            <div class="swiper-slide">
+                                <div class="team-card">
+                                    <img src="images/team/7.webp" alt="Patrick Williams">
+                                    <div class="p-3 text-center">
+                                        <h4 class="mb-0">Patrick Williams</h4>
+                                        <p class="mb-2">Warehouse Operations Lead</p>
+                                        <div class="social-icons">
+                                            <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                            <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 8: Michael Lee -->
+                            <div class="swiper-slide">
+                                <div class="team-card">
+                                    <img src="images/team/8.webp" alt="Michael Lee">
+                                    <div class="p-3 text-center">
+                                        <h4 class="mb-0">Michael Lee</h4>
+                                        <p class="mb-2">Last-Mile Delivery Manager</p>
+                                        <div class="social-icons">
+                                            <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                            <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Swiper Pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- Swiper Navigation -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+           
+        </div>
+        <!-- content close -->
+
+        
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Swiper Initialization Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Initializing Team Swiper...');
+            
+            const teamSwiper = new Swiper('.team-swiper', {
+                // Basic Settings
+                direction: 'horizontal',
+                loop: true,
+                speed: 500,
+                spaceBetween: 15,
+                grabCursor: true,
+                centeredSlides: false,
+                
+                // Autoplay
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                
+                // Keyboard Navigation
+                keyboard: {
+                    enabled: true,
+                    onlyInViewport: true,
+                },
+                
+                // Responsive Breakpoints
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 12,
+                        centeredSlides: true,
+                    },
+                    480: {
+                        slidesPerView: 1.3,
+                        spaceBetween: 14,
+                        centeredSlides: true,
+                    },
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 15,
+                        centeredSlides: false,
+                    },
+                    768: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 16,
+                        centeredSlides: false,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 18,
+                        centeredSlides: false,
+                    },
+                    1280: {
+                        slidesPerView: 3.5,
+                        spaceBetween: 20,
+                        centeredSlides: false,
+                    },
+                    1440: {
+                        slidesPerView: 4,
+                        spaceBetween: 22,
+                        centeredSlides: false,
+                    },
+                    1920: {
+                        slidesPerView: 4,
+                        spaceBetween: 25,
+                        centeredSlides: false,
+                    },
+                    2560: {
+                        slidesPerView: 5,
+                        spaceBetween: 28,
+                        centeredSlides: false,
+                    },
+                },
+                
+                // Pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                    clickable: true,
+                    dynamicBullets: true,
+                },
+                
+                // Navigation
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                
+                // Accessibility
+                a11y: {
+                    enabled: true,
+                    prevSlideMessage: 'Previous slide',
+                    nextSlideMessage: 'Next slide',
+                    paginationBulletMessage: 'Go to slide {{index}}',
+                },
+                
+                // Observer
+                observer: true,
+                observeParents: true,
+                
+                // Events
+                on: {
+                    init: function() {
+                        console.log('✅ Team Swiper Initialized Successfully');
+                        console.log('Total Slides:', this.slides.length);
+                        console.log('Current Slide:', this.activeIndex);
+                    },
+                    slideChange: function() {
+                        console.log('Slide changed to:', this.activeIndex);
+                    },
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
