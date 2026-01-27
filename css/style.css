@@ -525,13 +525,21 @@ header.header-static{
 }
 
 #subheader h1 {
-  font-size: 56px;
+  font-size: 43px;
   margin-bottom: 0;
 }
 
 #subheader.dark {
   background-color: #1A1C26;
 }
+
+.grid_style{
+  display: grid;
+justify-content: left;
+
+}
+
+
 
 #subheader.dark h1 {
   color: #fff;
@@ -7095,9 +7103,9 @@ footer .tiny-border span {
   background: linear-gradient(180deg, rgba(30, 31, 34, 1) 0%, rgba(30, 31, 34, 0) 100%);
 }
 
-.gradient-edge-top.color {
+/* .gradient-edge-top.color {
   background: linear-gradient(180deg, rgba(var(--primary-color-rgb),1) 0%, rgba(var(--primary-color-rgb),0) 100%);
-}
+} */
 .gradient-edge-bottom.color{
   background: linear-gradient(0deg, rgba(var(--primary-color-rgb), 1) 0%, rgba(var(--primary-color-rgb), 0) 100%);
 }

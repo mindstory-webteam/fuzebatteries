@@ -199,7 +199,7 @@
                         <!-- Slide 1 -->
                         <div class="swiper-slide">
                             <div class="swiper-inner" data-bgimage="url(images/banner/banner1.jpg)" style="background-position: center;">
-                                <div class="sw-caption">
+                                <!-- <div class="sw-caption">
                                     <div class="container">
                                         <div class="row gx-5 align-items-center justify-content-between">
                                             <div class="col-lg-6"> 
@@ -219,7 +219,7 @@
                                             
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="abs w-100 bottom-0 z-2 pb-4 sm-hide">
                                     <div class="container">
@@ -250,11 +250,11 @@
 
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
-                            <div class="swiper-inner" data-bgimage="url(images/banner/banner2.jpg)">
+                            <div class="swiper-inner" data-bgimage="url(images/banner/banner1.jpg)">
                                 <div class="sw-caption">
                                     <div class="container">
                                         <div class="row gx-5 align-items-center justify-content-between">
-                                            <div class="col-lg-6"> 
+                                            <!-- <div class="col-lg-6"> 
                                                 <div class="sw-text-wrapper">
                                                     <h1 class="animated text-uppercase anim-order-1">Seamless Ship Freight for Global Trade</h1>
 
@@ -267,7 +267,7 @@
                                                         
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -310,11 +310,530 @@
                     </div>
                 </div>
             </section>
+<!-------------------------------------->
+<!-- SECTION CODE START - Copy from here -->
+ <style>
+    .testimonial-section {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 60px 0;
+    }
 
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 40px;
+    }
+
+    .main-heading {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .highlight {
+      color: #2563eb;
+    }
+
+    .navigation-buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #e5e7eb;
+      background: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      font-size: 1.2rem;
+      color: #000;
+    }
+
+    .nav-btn:hover {
+      border-color: #000;
+      background: #000;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 30px;
+      animation: scroll 30s linear infinite;
+      width: max-content;
+    }
+
+    .carousel-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .testimonial-card {
+      flex-shrink: 0;
+      width: 350px;
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.4s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-image {
+      position: relative;
+      width: 100%;
+      height: 450px;
+      overflow: hidden;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .testimonial-card:hover .card-image img {
+      transform: scale(1.05);
+    }
+
+    .external-link {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 2;
+    }
+
+    .external-link:hover {
+      background: white;
+      transform: scale(1.1);
+    }
+
+    .external-link svg {
+      width: 18px;
+      height: 18px;
+      stroke: #000;
+      stroke-width: 2;
+    }
+
+    .card-content {
+      padding: 25px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95));
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: white;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .testimonial-card:hover .card-content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .testimonial-name {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: white;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+    }
+
+    .testimonial-card:hover .testimonial-name {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .testimonial-role {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 400;
+      margin-bottom: 15px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    }
+
+    .testimonial-card:hover .testimonial-role {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .view-product-btn {
+      display: inline-block;
+      padding: 10px 24px;
+      background: white;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .testimonial-card:hover .view-product-btn {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .view-product-btn:hover {
+      background: #2563eb;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .testimonial-card:nth-child(1) .card-image {
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    }
+
+    .testimonial-card:nth-child(2) .card-image {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    }
+
+    .testimonial-card:nth-child(3) .card-image {
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    }
+
+    .testimonial-card:nth-child(4) .card-image {
+      background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+    }
+
+    .testimonial-card:nth-child(5) .card-image {
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    }
+
+    @media (max-width: 768px) {
+      .section-header {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .main-heading {
+        font-size: 2rem;
+      }
+
+      .testimonial-card {
+        width: 300px;
+      }
+
+      .card-image {
+        height: 380px;
+      }
+    }
+  </style>
+
+  <section class="testimonial-section">
+    <div class="section-header">
+      <h1 class="main-heading">
+        Why <span class="highlight">expert.io</span> is The Right Choice for You
+      </h1>
+      <div class="navigation-buttons">
+        <button class="nav-btn" id="prevBtn" aria-label="Previous">‹</button>
+        <button class="nav-btn" id="nextBtn" aria-label="Next">›</button>
+      </div>
+    </div>
+
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="carouselTrack">
+        <!-- Card 1 - Tall Tubular Battery -->
+        <div class="testimonial-card">
+          <div class="card-image">
+            <img src="./images/products/blue-battery.jpg" alt="Tall Tubular Battery">
+            <div class="external-link">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="testimonial-name">Tall Tubular Battery</h3>
+            <p class="testimonial-role">High Performance Power Storage</p>
+            <a href="./products.html">
+              <button class="view-product-btn">View Product</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 - Inverter -->
+        <div class="testimonial-card">
+          <div class="card-image">
+            <img src="./images/products/inverter-product-page-img.png" alt="Inverter">
+            <div class="external-link">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="testimonial-name">Inverter</h3>
+            <p class="testimonial-role">Reliable Power Backup Solution</p>
+            <a href="./products.html">
+              <button class="view-product-btn">View Product</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 - Solar Battery -->
+        <div class="testimonial-card">
+          <div class="card-image">
+            <img src="./images/products/gold-battery.jpg" alt="Solar Battery">
+            <div class="external-link">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="testimonial-name">Solar Battery</h3>
+            <p class="testimonial-role">Renewable Energy Storage</p>
+            <a href="./products.html">
+                <button class="view-product-btn">View Product</button>
+              </a>
+          </div>
+        </div>
+
+        <!-- Card 4 - Tall Tubular Battery -->
+        <div class="testimonial-card">
+          <div class="card-image">
+            <img src="./images/products/red-battery.jpg" alt="Tall Tubular Battery">
+            <div class="external-link">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="testimonial-name">Tall Tubular Battery</h3>
+            <p class="testimonial-role">Extended Life Power Source</p>
+            <a href="./products.html">
+              <button class="view-product-btn">View Product</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 5 - Lithium Ion Battery -->
+        <div class="testimonial-card">
+          <div class="card-image">
+            <img src="./images/products/lithium-product.jpg" alt="Lithium Ion Battery">
+            <div class="external-link">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="testimonial-name">Lithium Ion Battery</h3>
+            <p class="testimonial-role">Advanced Energy Technology</p>
+            <a href="./products.html">
+              <button class="view-product-btn">View Product</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Duplicate cards for seamless loop -->
+        <div class="testimonial-card">
+          <div class="card-image">
+            <img src="./images/products/blue-battery.jpg" alt="Tall Tubular Battery">
+            <div class="external-link">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="testimonial-name">Tall Tubular Battery</h3>
+            <p class="testimonial-role">High Performance Power Storage</p>
+            <a href="./products.html">
+              <button class="view-product-btn">View Product</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="card-image">
+            <img src="./images/products/inverter-product-page-img.png" alt="Inverter">
+            <div class="external-link">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="testimonial-name">Inverter</h3>
+            <p class="testimonial-role">Reliable Power Backup Solution</p>
+            <a href="./products.html">
+              <button class="view-product-btn">View Product</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="card-image">
+            <img src="./images/products/gold-battery.jpg" alt="Solar Battery">
+            <div class="external-link">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="testimonial-name">Solar Battery</h3>
+            <p class="testimonial-role">Renewable Energy Storage</p>
+            <a href="./products.html">
+              <button class="view-product-btn">View Product</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="card-image">
+            <img src="./images/products/red-battery.jpg" alt="Tall Tubular Battery">
+            <div class="external-link">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="testimonial-name">Tall Tubular Battery</h3>
+            <p class="testimonial-role">Extended Life Power Source</p>
+            <a href="./products.html">
+              <button class="view-product-btn">View Product</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="card-image">
+            <img src="./images/products/lithium-product.jpg" alt="Lithium Ion Battery">
+            <div class="external-link">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="testimonial-name">Lithium Ion Battery</h3>
+            <p class="testimonial-role">Advanced Energy Technology</p>
+            <a href="./products.html">
+              <button class="view-product-btn">View Product</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const track = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    prevBtn.addEventListener('click', () => {
+      track.style.animation = 'none';
+      const currentTransform = window.getComputedStyle(track).transform;
+      const matrix = new DOMMatrix(currentTransform);
+      const currentX = matrix.m41;
+      track.style.transform = `translateX(${currentX + 380}px)`;
+      
+      setTimeout(() => {
+        track.style.animation = 'scroll 30s linear infinite';
+      }, 500);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      track.style.animation = 'none';
+      const currentTransform = window.getComputedStyle(track).transform;
+      const matrix = new DOMMatrix(currentTransform);
+      const currentX = matrix.m41;
+      track.style.transform = `translateX(${currentX - 380}px)`;
+      
+      setTimeout(() => {
+        track.style.animation = 'scroll 30s linear infinite';
+      }, 500);
+    });
+
+    // View Product button click handler
+    // document.querySelectorAll('.view-product-btn').forEach(btn => {
+    //   btn.addEventListener('click', (e) => {
+    //     e.stopPropagation();
+    //     const card = btn.closest('.testimonial-card');
+    //     const name = card.querySelector('.testimonial-name').textContent;
+    //     console.log(`Viewing product: ${name}`);
+    //     alert(`Opening ${name} product page`);
+    //   });
+    // });
+
+    // External link click handler
+    // document.querySelectorAll('.external-link').forEach(link => {
+    //   link.addEventListener('click', (e) => {
+    //     e.stopPropagation();
+    //     const card = link.closest('.testimonial-card');
+    //     const name = card.querySelector('.testimonial-name').textContent;
+    //     console.log(`Opening external link for ${name}`);
+    //   });
+    // });
+
+    // track.addEventListener('mouseenter', () => {
+    //   track.style.animationPlayState = 'paused';
+    // });
+
+    // track.addEventListener('mouseleave', () => {
+    //   track.style.animationPlayState = 'running';
+    // });
+  </script>
+<!-- SECTION CODE END -->
 
             
 
-            <!--------------------------------(about)----------------------------------->
+<!--------------------------------(about)----------------------------------->
 
 <style>
 /* How it Started Section - Clean Version */
@@ -365,10 +884,10 @@
 
 .image-placeholder {
     width: 100%;
-    height: 280px;
+    height: 220px;
     background: #f3f4f6;
     border: 2px solid #e5e7eb;
-    border-radius: 24px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -410,8 +929,8 @@
 .stat-card {
     background: white;
     border: 2px solid #e5e7eb;
-    border-radius: 16px;
-    padding: 24px 20px;
+    border-radius: 12px;
+    padding: 18px 16px;
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(20px);
@@ -430,15 +949,15 @@
 }
 
 .stat-number {
-    font-size: 42px;
+    font-size: 36px;
     font-weight: 700;
     color: #000;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     line-height: 1;
 }
 
 .stat-label {
-    font-size: 15px;
+    font-size: 14px;
     color: #000;
     font-weight: 400;
     line-height: 1.4;
@@ -474,16 +993,16 @@
         font-size: 36px;
     }
     .image-placeholder {
-        height: 240px;
+        height: 200px;
     }
     .stats-grid {
         gap: 12px;
     }
     .stat-card {
-        padding: 20px 16px;
+        padding: 16px 14px;
     }
     .stat-number {
-        font-size: 36px;
+        font-size: 32px;
     }
 }
 
@@ -498,7 +1017,7 @@
         grid-template-columns: 1fr;
     }
     .stat-number {
-        font-size: 36px;
+        font-size: 30px;
     }
 }
 </style>
@@ -508,34 +1027,29 @@
     <!-- Left Content -->
     <div class="left-content">
         <div class="header-section">
-        <!-- <div class="label-pill"> -->
-            <!-- <p class="label-text">WHY CHOOSE US</p> -->
-        <!-- </div> -->
         <h1 class="main-heading">
-            Why <span class="highlight">expert.io</span><br> is The Right Choice for You
-        </h1>
+                Why <span class="highlight">Fuze</span> is the Right Choice for You.
+            </h1>
     </div>
-        <p class="description">
-            Kawruha was founded by Robert Anderson, a passionate lifelong learner, 
-            and Maria Sanchez, a visionary educator. Their shared dream was to create 
-            a digital haven of knowledge accessible to all. United by the transformational 
-            power of education, they embarked on a journey to build Kawruh. With relentless 
-            dedication, they gathered a global community eager to learn and grow together.
+       <p class="description">
+            Welcome to <strong>Fuze</strong> – a leading Lithium Ion Battery Manufacturer in Kerala.
+            At Fuze, we are redefining the way Kerala powers homes and businesses by delivering
+            innovative, compact, and eco-friendly energy solutions tailored for modern lifestyles.
         </p>
+
         <p class="description">
-            Kawruha was founded by Robert Anderson, a passionate lifelong learner, 
-            and Maria Sanchez, a visionary educator. Their shared dream was to create 
-            a digital haven of knowledge accessible to all. United by the transformational 
-            power of education, they embarked on a journey to build Kawruh. With relentless 
-            dedication, they gathered a global community eager to learn and grow together.
+            From stylish apartments to bustling commercial spaces, Fuze provides silent, efficient,
+            and long-lasting power backup solutions. With our cutting-edge lithium-ion UPS systems
+            and advanced battery technology, we don’t just meet expectations—we set new benchmarks
+            in power storage and reliability.
         </p>
-    </div>
+  </div>
 
     <!-- Right Content -->
     <div class="right-content">
         <!-- Image Placeholder -->
         <div class="image-placeholder">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop" 
+            <img src="./images/banner/about/about-img.webp" 
                  alt="Team collaboration" 
                  class="team-image">
         </div>
@@ -622,615 +1136,6 @@ document.addEventListener('DOMContentLoaded', function() {
  
 <!-- product area-end------------------------------------>
 
-<!-- SECTION CODE START - Copy from here -->
-<style>
- 
-
-  .testimonial-section {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 60px 0;
-    /* font-family: 'Poppins', sans-serif; */
-  }
-
-  .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 40px;
-  }
-
-  .header-content h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 15px;
-    line-height: 1.2;
-  }
-
-  .header-content p {
-    font-size: 1rem;
-    color: #6b7280;
-    max-width: 600px;
-    line-height: 1.6;
-  }
-
-  .navigation-buttons {
-    display: flex;
-    gap: 15px;
-  }
-
-  .nav-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid #e5e7eb;
-    background: white;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    font-size: 1.2rem;
-    color: #1a1a1a;
-  }
-
-  .nav-btn:hover {
-    border-color: #1a1a1a;
-    background: #1a1a1a;
-    color: white;
-    transform: scale(1.05);
-  }
-
-  .carousel-wrapper {
-    position: relative;
-    overflow: hidden;
-    /* mask-image: linear-gradient(
-      to right,
-      transparent,
-      black 5%,
-      black 95%,
-      transparent
-    ); */
-  }
-
-  .carousel-track {
-    display: flex;
-    gap: 30px;
-    animation: scroll 30s linear infinite;
-    width: max-content;
-  }
-
-  .carousel-track:hover {
-    animation-play-state: paused;
-  }
-
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  .testimonial-card {
-    flex-shrink: 0;
-    width: 350px;
-    border-radius: 24px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    transition: transform 0.4s ease;
-  }
-
-  .testimonial-card:hover {
-    transform: translateY(-10px);
-  }
-
-  .card-image {
-    position: relative;
-    width: 100%;
-    /* height: 420px; */
-    overflow: hidden;
-  }
-
-  .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
-
-  .testimonial-card:hover .card-image img {
-    transform: scale(1.05);
-  }
-
-  .external-link {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 45px;
-    height: 45px;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 2;
-  }
-
-  .external-link:hover {
-    background: white;
-    transform: scale(1.1);
-  }
-
-  .external-link svg {
-    width: 18px;
-    height: 18px;
-    stroke: #1a1a1a;
-    stroke-width: 2;
-  }
-
-  .card-content {
-    padding: 25px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95));
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: white;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .testimonial-card:hover .card-content {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .rating {
-    display: flex;
-    gap: 4px;
-    margin-bottom: 15px;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
-  }
-
-  .testimonial-card:hover .rating {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .star {
-    color: #fbbf24;
-    font-size: 1.1rem;
-  }
-
-  .star.empty {
-    color: rgba(251, 191, 36, 0.3);
-  }
-
-  .testimonial-name {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: white;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-  }
-
-  .testimonial-card:hover .testimonial-name {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .testimonial-role {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: 400;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-  }
-
-  .testimonial-card:hover .testimonial-role {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .testimonial-card:nth-child(1) .card-image {
-    background: linear-gradient(135deg, #c1502e 0%, #8b3a1e 100%);
-  }
-
-  .testimonial-card:nth-child(2) .card-image {
-    background: linear-gradient(135deg, #d4af37 0%, #aa8b2e 100%);
-  }
-
-  .testimonial-card:nth-child(3) .card-image {
-    background: linear-gradient(135deg, #4a6fa5 0%, #2c4d73 100%);
-  }
-
-  .testimonial-card:nth-child(4) .card-image {
-    background: linear-gradient(135deg, #8b5a3c 0%, #654321 100%);
-  }
-
-  .testimonial-card:nth-child(5) .card-image {
-    background: linear-gradient(135deg, #5f7c6f 0%, #3d5147 100%);
-  }
-
-  .testimonial-card:nth-child(6) .card-image {
-    background: linear-gradient(135deg, #a0616a 0%, #7a4a52 100%);
-  }
-
-  @media (max-width: 768px) {
-    .section-header {
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    .header-content h2 {
-      font-size: 2rem;
-    }
-
-    .testimonial-card {
-      width: 300px;
-    }
-
-    .card-image {
-      height: 380px;
-    }
-  }
-</style>
-
-<section class="testimonial-section">
-  <div class="section-header">
-    <h1 class="main-heading">
-            Why <span class="highlight">expert.io</span> is The Right Choice for You
-        </h1>
-    <div class="navigation-buttons">
-      <button class="nav-btn" id="prevBtn" aria-label="Previous">
-        <span>‹</span>
-      </button>
-      <button class="nav-btn" id="nextBtn" aria-label="Next">
-        <span>›</span>
-      </button>
-    </div>
-  </div>
-
-  <div class="carousel-wrapper">
-    <div class="carousel-track" id="carouselTrack">
-      <!-- Card 1 -->
-      <div class="testimonial-card">
-        <div class="card-image">
-          <img src="./images/products/gold-battery.jpg" alt="Premium Headphones">
-          <div class="external-link">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-content">
-          <div class="rating">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-          </div>
-          <h3 class="testimonial-name">Premium Headphones</h3>
-          <p class="testimonial-role">Wireless Audio</p>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="testimonial-card">
-        <div class="card-image">
-          <img src="./images/products/blue-battery.jpg" alt="Smart Watch">
-          <div class="external-link">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-content">
-          <div class="rating">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star empty">★</span>
-          </div>
-          <h3 class="testimonial-name">Smart Watch Pro</h3>
-          <p class="testimonial-role">Fitness Tracker</p>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="testimonial-card">
-        <div class="card-image">
-          <img src="./images/products/white-battery.jpg" alt="Designer Sunglasses">
-          <div class="external-link">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-content">
-          <div class="rating">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-          </div>
-          <h3 class="testimonial-name">Designer Sunglasses</h3>
-          <p class="testimonial-role">Fashion Eyewear</p>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="testimonial-card">
-        <div class="card-image">
-          <img src="./images/products/red-battery.jpg" alt="Leather Backpack">
-          <div class="external-link">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-content">
-          <div class="rating">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-          </div>
-          <h3 class="testimonial-name">Leather Backpack</h3>
-          <p class="testimonial-role">Travel Gear</p>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="testimonial-card">
-        <div class="card-image">
-          <img src="./images/products/orange.jpg" alt="Wireless Earbuds">
-          <div class="external-link">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-content">
-          <div class="rating">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star empty">★</span>
-          </div>
-          <h3 class="testimonial-name">Wireless Earbuds</h3>
-          <p class="testimonial-role">Compact Audio</p>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="testimonial-card">
-        <div class="card-image">
-          <img src="./images/products/gold-battery.jpg" alt="Camera Lens">
-          <div class="external-link">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-content">
-          <div class="rating">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-          </div>
-          <h3 class="testimonial-name">Camera Lens</h3>
-          <p class="testimonial-role">Photography</p>
-        </div>
-      </div>
-
-      <!-- Duplicate cards for seamless loop -->
-      <div class="testimonial-card">
-        <div class="card-image">
-          <img src="./images/products/blue-battery.jpg" alt="Premium Headphones">
-          <div class="external-link">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-content">
-          <div class="rating">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-          </div>
-          <h3 class="testimonial-name">Premium Headphones</h3>
-          <p class="testimonial-role">Wireless Audio</p>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="card-image">
-          <img src="./images/products/white-battery.jpg" alt="Smart Watch">
-          <div class="external-link">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-content">
-          <div class="rating">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star empty">★</span>
-          </div>
-          <h3 class="testimonial-name">Smart Watch Pro</h3>
-          <p class="testimonial-role">Fitness Tracker</p>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="card-image">
-          <img src="./images/products/red-battery.jpg" alt="Designer Sunglasses">
-          <div class="external-link">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-content">
-          <div class="rating">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-          </div>
-          <h3 class="testimonial-name">Designer Sunglasses</h3>
-          <p class="testimonial-role">Fashion Eyewear</p>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="card-image">
-          <img src="./images/products/orange.jpg" alt="Leather Backpack">
-          <div class="external-link">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-content">
-          <div class="rating">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-          </div>
-          <h3 class="testimonial-name">Leather Backpack</h3>
-          <p class="testimonial-role">Travel Gear</p>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="card-image">
-          <img src="./images/products/gold-battery.jpg" alt="Wireless Earbuds">
-          <div class="external-link">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-content">
-          <div class="rating">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star empty">★</span>
-          </div>
-          <h3 class="testimonial-name">Wireless Earbuds</h3>
-          <p class="testimonial-role">Compact Audio</p>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="card-image">
-          <img src="./images/products/blue-battery.jpg" alt="Camera Lens">
-          <div class="external-link">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-content">
-          <div class="rating">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-          </div>
-          <h3 class="testimonial-name">Camera Lens</h3>
-          <p class="testimonial-role">Photography</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-  const track = document.getElementById('carouselTrack');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-
-  prevBtn.addEventListener('click', () => {
-    track.style.animation = 'none';
-    const currentTransform = window.getComputedStyle(track).transform;
-    const matrix = new DOMMatrix(currentTransform);
-    const currentX = matrix.m41;
-    track.style.transform = `translateX(${currentX + 380}px)`;
-    
-    setTimeout(() => {
-      track.style.animation = 'scroll 30s linear infinite';
-    }, 500);
-  });
-
-  nextBtn.addEventListener('click', () => {
-    track.style.animation = 'none';
-    const currentTransform = window.getComputedStyle(track).transform;
-    const matrix = new DOMMatrix(currentTransform);
-    const currentX = matrix.m41;
-    track.style.transform = `translateX(${currentX - 380}px)`;
-    
-    setTimeout(() => {
-      track.style.animation = 'scroll 30s linear infinite';
-    }, 500);
-  });
-
-  document.querySelectorAll('.external-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const card = link.closest('.testimonial-card');
-      const name = card.querySelector('.testimonial-name').textContent;
-      console.log(`Opening external link for ${name}`);
-    });
-  });
-
-  track.addEventListener('mouseenter', () => {
-    track.style.animationPlayState = 'paused';
-  });
-
-  track.addEventListener('mouseleave', () => {
-    track.style.animationPlayState = 'running';
-  });
-</script>
-<!-- SECTION CODE END -->
-
-
-
-
 
 
             <!-----------------------------------(why choose)--------------------------->
@@ -1265,7 +1170,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     .main-heading {
-        font-size: 44px;
+        font-size: 40px;
         font-weight: 400;
         color: #333;
         margin-bottom: 20px;
@@ -1388,90 +1293,109 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 </style>
 
-<section class="expert-section">
-    
-    <!-- Header Section -->
-    <div class="header-section">
-        
-        <h1 class="main-heading">
-            Why <span class="highlight">expert.io</span> is The Right Choice for You
-        </h1>
-    </div>
-    
-    <!-- Top Grid -->
-    <div class="grid-top">
-        
-        <!-- Card 1: Expert Instructors -->
-        <div class="card">
-            <div class="icon-circle">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                    <circle cx="12" cy="7" r="4"/>
-                </svg>
-            </div>
-            <h3 class="card-title">Expert Instructors</h3>
-            <p class="card-text">Learn from top industry professionals who bring years of real-world experience to the classroom, providing you with the latest tools, techniques, and insights needed to excel in your field.</p>
-        </div>
-        
-        <!-- Card 2: Career-Boost Certify -->
-        <div class="card">
-            <div class="icon-circle">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                </svg>
-            </div>
-            <h3 class="card-title">Career-Boost Certify</h3>
-            <p class="card-text">Earn certifications that are highly regarded by employers, helping you to enhance your resume, gain industry recognition, and open doors to new career opportunities.</p>
-        </div>
-        
-    </div>
-    
-    <!-- Bottom Grid -->
-    <div class="grid-bottom">
-        
-        <!-- Card 3: 100+ High Impact Courses -->
-        <div class="card">
-            <div class="icon-circle">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-                </svg>
-            </div>
-            <h3 class="card-title">100+ High Impact Courses</h3>
-            <p class="card-text">expert.io offers over 100 courses that cover essential skills in today's tech industry. Whether you're a beginner or an experienced professional, our courses in web development, data science, and cybersecurity provide practical, hands-on learning to help you apply your skills immediately & competitive.</p>
-        </div>
-        
-        <!-- Card 4: Flexible Learning Schedules (Dark) -->
-        <div class="card card-dark">
-            <div>
-                <div class="icon-circle-white">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                        <line x1="16" y1="2" x2="16" y2="6"/>
-                        <line x1="8" y1="2" x2="8" y2="6"/>
-                        <line x1="3" y1="10" x2="21" y2="10"/>
-                    </svg>
-                </div>
-                <h3 class="card-title-white">Flexible Learning Schedules</h3>
-                <p class="card-text-white">At expert.io, we understand the importance of balancing learning with a busy lifestyle. That's why our courses are available on-demand, allowing you to learn at your own pace, anytime and anywhere.</p>
-                <p class="card-text-white" style="margin-bottom: 0;">Whether you're a working professional or a student, you can customize your schedule to fit your needs.</p>
-            </div>
-            <button class="btn-trial">
-                Start Free Trial
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"/>
-                    <polyline points="12 5 19 12 12 19"/>
-                </svg>
-            </button>
-        </div>
-        
-    </div>
-</section>
+          <section class="expert-section">
+              
+              <!-- Header Section -->
+              <div class="header-section">
+                  <h1 class="main-heading">
+                      Why <span class="highlight">Fuze</span> is the Right Choice for You
+                  </h1>
+              </div>
+              
+              <!-- Top Grid -->
+              <div class="grid-top">
+                  
+                  <!-- Card 1: Advanced Battery Technology -->
+                  <div class="card">
+                      <div class="icon-circle">
+                          
+                          <svg width="28px" height="28px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#000000" d="M168.063 21.844c-25.008 0-47.713 5.09-64.97 13.968-16.938 8.716-29.722 21.962-30.187 38.626h-.03v93.625C59.258 180.325 46.9 197.92 37.75 219.032c-9.94 22.934-14.284 45.82-13 65.187 1.25 18.84 8.173 35.74 23 42.905l.344.156c.302.143.598.274.906.408l23.875 10.343v108.814h.03c.675 16.458 13.396 29.547 30.19 38.187 17.257 8.88 39.97 13.97 64.968 13.97 24.996 0 47.71-5.09 64.968-13.97 16.794-8.64 29.515-21.728 30.19-38.186h.03V420.56l42.844 18.563.22.094 74.56 32.31 7.72 3.345.844.375v-.03c15.48 6.212 32.73-.264 47.468-12.345 15.01-12.302 28.71-31.118 38.656-54.063 9.946-22.944 14.315-45.823 13.032-65.187-1.26-19.01-8.33-36.01-23.438-43.063v-.03l-8.562-3.72L382.03 264.5l-118.78-51.47V76.97c.025-.53.03-1.06.03-1.595 0-.315-.02-.625-.03-.938-.465-16.663-13.248-29.91-30.188-38.624-17.256-8.88-39.992-13.97-65-13.97zM140.25 43.062c.03-.005.064.006.094 0-6.743 3.237-10.906 7.637-10.906 12.5 0 9.93 17.292 17.97 38.625 17.97 21.332 0 38.625-8.04 38.625-17.97 0-4.863-4.164-9.263-10.907-12.5 11.11 2.093 20.927 5.366 28.72 9.376 13.818 7.11 20.094 15.646 20.094 22.937 0 7.29-6.276 15.797-20.094 22.906-13.818 7.11-34.028 11.907-56.438 11.907-22.41 0-42.62-4.797-56.437-11.906-13.818-7.108-20.063-15.614-20.063-22.905 0-7.29 6.245-15.828 20.063-22.938 7.772-3.998 17.554-7.28 28.625-9.374zM72.875 195.656v122l-16.438-7.125c-6.678-2.894-12.003-12.02-13.03-27.53-1.03-15.51 2.593-35.983 11.5-56.53 5.082-11.73 11.316-22.17 17.968-30.814zm171.688 1.75V445.47c0 7.278-6.24 15.825-20.063 22.936-13.822 7.112-34.042 11.906-56.438 11.906-22.395 0-42.615-4.794-56.437-11.906-13.822-7.11-20.063-15.658-20.063-22.937V200.31L145.375 280l-36.844 12.875L229.75 420.25l-51.72-105.78 23.907-11.845-40.156-84.188c2.082.073 4.168.125 6.282.125 24.997 0 47.71-5.09 64.97-13.968 4.134-2.128 8.008-4.537 11.53-7.188zm18.687 36l79 34.25-79 14.78v-49.03zm187.97 82.78c2.094.035 3.983.433 5.655 1.158 6.69 2.9 12.035 12.026 13.063 27.53.577 8.715-.333 18.995-2.813 29.97-.305-7.425-2.682-12.95-7.125-14.875-9.11-3.95-23.39 8.707-31.875 28.28-8.484 19.573-7.953 38.645 1.156 42.594 4.45 1.928 10.12-.104 15.75-4.97-6.316 9.33-13.207 17.023-19.967 22.563-12.02 9.85-22.342 12.18-29.032 9.282-6.688-2.9-12.034-12.027-13.06-27.533-1.03-15.505 2.618-35.94 11.53-56.5 8.912-20.56 21.357-37.21 33.375-47.062 9.014-7.388 17.058-10.537 23.344-10.438zm-153.5 8.658c-.9 1.89-1.78 3.8-2.626 5.75-9.94 22.935-14.315 45.79-13.03 65.156.307 4.65.966 9.173 1.998 13.47l-20.812-9v-74.126l34.47-1.25z"></path></g></svg>
+                      </div>
+                      <h3 class="card-title">Advanced Lithium-Ion Technology</h3>
+                      <p class="card-text" style="text-align: justify;">
+                          Fuze leverages next-generation lithium-ion battery technology to deliver
+                          compact, high-performance, and long-lasting power solutions designed for
+                          modern homes and businesses.
+                      </p>
+                  </div>
+                  
+                  <!-- Card 2: Eco-Friendly & Safe -->
+                  <div class="card">
+                      <div class="icon-circle">
+                          
+                          <svg fill="#000000" height="28px" width="28px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 405.357 405.357" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M394.357,204.417c-1.216-0.238-23.027-4.458-52.295-6.616c0.142-2.689,0.217-5.396,0.217-8.121 c0-84.192-68.496-152.688-152.688-152.688c-84.193,0-152.69,68.496-152.69,152.688c0,17.751,3.056,34.798,8.649,50.659 c-19.522,1.643-33.711,4.388-34.55,4.553l-11,2.157l4.791,10.134c1.477,3.125,36.686,76.783,80.787,99.065 c15.915,8.04,30.8,12.117,44.243,12.119c0.003,0,0.004,0,0.006,0c20.021,0,36.416-9.044,46.732-25.609 c13.534,16.171,32.582,24.884,55.124,24.884c17.957,0,37.921-5.485,59.336-16.304c59.619-30.122,107.536-130.375,109.547-134.629 l4.791-10.134L394.357,204.417z M315.388,140.031c-5.755-4.712-12.383-9.122-19.845-13.163c-9.235-5.002-19.452-9.262-30.387-12.751 c-3.489-10.937-7.749-21.154-12.753-30.391c-4.041-7.461-8.45-14.089-13.163-19.844C273.94,77.627,301.645,105.332,315.388,140.031z M323.705,180.955h-47.559c-0.501-16.042-2.389-31.621-5.546-46.289C298.94,145.74,318.893,162.32,323.705,180.955z M198.316,55.565 c18.636,4.813,35.216,24.767,46.291,53.107c-14.669-3.157-30.247-5.044-46.291-5.546V55.565z M198.316,120.582 c18.761,0.646,36.62,3.355,52.694,7.679c4.324,16.075,7.033,33.933,7.68,52.693h-60.374V120.582z M198.316,198.405h60.374 c-0.027,0.771-0.056,1.542-0.089,2.31c-14.552,2.7-27.128,6.702-37.613,11.999c-8.372,4.229-15.931,8.743-22.672,13.527V198.405z M180.865,55.565v47.561c-16.043,0.502-31.622,2.389-46.291,5.546C145.649,80.332,162.23,60.378,180.865,55.565z M180.865,120.582 v60.373h-60.374c0.646-18.76,3.355-36.619,7.68-52.694C144.245,123.937,162.105,121.229,180.865,120.582z M139.94,63.884 c-4.713,5.755-9.122,12.383-13.163,19.844c-5.003,9.236-9.263,19.454-12.752,30.39c-10.937,3.49-21.153,7.749-30.39,12.752 c-7.461,4.041-14.089,8.45-19.844,13.162C77.536,105.331,105.24,77.627,139.94,63.884z M108.581,134.665 c-3.157,14.669-5.045,30.247-5.546,46.29H55.475C60.287,162.32,80.241,145.74,108.581,134.665z M103.035,198.405 c0.468,14.964,2.138,29.525,4.922,43.321c-2.989-0.499-6.083-0.929-9.283-1.284c-23.04-10.862-38.97-25.656-43.199-42.037H103.035z M157.417,339.265c-5.787,6.386-14.519,11.65-27.59,11.65h-0.004c-10.685-0.001-22.924-3.447-36.376-10.243 c-29.693-15.003-56.48-60.004-67.527-80.536c11.003-1.574,28.615-3.564,47.309-3.564c24.886,0,44.258,3.412,57.579,10.142 c12.003,6.063,21.188,12.85,27.489,20.163c-1.253,12.721,1.173,25.744,7.249,38.511l-88.215-41.304L157.417,339.265z M145.958,255.082c-2.332-1.349-4.753-2.666-7.282-3.944c-3.584-1.811-7.507-3.408-11.727-4.812 c-3.612-14.809-5.874-30.997-6.458-47.922h60.374v42.683c-5.185,5.374-9.511,11.015-12.972,16.91 C160.374,257.346,153.042,256.365,145.958,255.082z M283.15,335.761c-18.952,9.575-36.269,14.429-51.467,14.429 c-20.277,0-33.407-8.66-41.821-18.749l121.154-77.605l-128.918,65.723c-0.026-0.052-0.055-0.105-0.081-0.157 c-17.251-34.151-0.178-67.36,46.84-91.112c18.769-9.482,45.89-14.29,80.61-14.29c28.598,0,55.445,3.379,70.071,5.613 C365.815,245.721,326.911,313.652,283.15,335.761z"></path> </g></svg>
+                      </div>
+                      <h3 class="card-title">Eco-Friendly & Safe Power</h3>
+                      <p class="card-text" style="text-align: justify;">
+                          Our batteries are engineered with safety and sustainability at their core.
+                          Zero emissions, silent operation, and advanced protection systems ensure
+                          reliable power without harming the environment.
+                      </p>
+                  </div>
+                  
+              </div>
+              
+              <!-- Bottom Grid -->
+              <div class="grid-bottom">
+                  
+                  <!-- Card 3: Wide Range of Applications -->
+                  <!-- Card 3: Wide Range of Applications -->
+              <div class="card">
+                  <div class="icon-circle">
+                      <svg fill="#000000" width="28px" height="28px" viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12,10h7L8,22l3-9H5L13,2Z"></path>
+                      </svg>
+                  </div>
+                  <h3 class="card-title">Versatile Power Solutions</h3>
+                  <p class="card-text" style="text-align: justify;">
+                      Fuze offers versatile power backup solutions designed to meet the demands of
+                      residential, commercial, and industrial environments. From individual homes
+                      and apartments to offices, retail spaces, hospitals, and educational
+                      institutions, our batteries deliver dependable performance in every setting.
+                  </p>
+                  <p class="card-text" style="text-align: justify;">
+                      Engineered for flexibility and scalability, Fuze lithium-ion UPS systems
+                      seamlessly adapt to varying load requirements while ensuring high efficiency,
+                      faster charging, and long operational life. Whatever your power needs,
+                      Fuze provides a smart and reliable energy solution you can count on.
+                  </p>
+              </div>
+
+                  
+                  <!-- Card 4: Reliable Performance (Dark) -->
+                  <div class="card card-dark">
+                      <div>
+                          <div class="icon-circle-white">
+                              <svg width="28px" height="28px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g fill="none" fill-rule="evenodd" id="页面-1" stroke="none" stroke-width="1"> <g id="导航图标" transform="translate(-251.000000, -207.000000)"> <g id="编组" transform="translate(251.000000, 207.000000)"> <rect fill="#FFFFFF" fill-opacity="0.01" fill-rule="nonzero" height="24" id="矩形" width="24" x="0" y="0"></rect> <path d="M18,16 C20.20915,16 22,14.20915 22,12 C22,9.79085 20.20915,8 18,8" id="路径"></path> <path d="M18,16 L18,16 C20.20915,16 22,14.20915 22,12 C22,9.79085 20.20915,8 18,8" id="路径" stroke="#212121" stroke-linejoin="round" stroke-width="1.5"></path> <path d="M6,8 C3.79086,8 2,9.79085 2,12 C2,14.20915 3.79086,16 6,16" id="路径"></path> <path d="M6,8 C3.79086,8 2,9.79085 2,12 C2,14.20915 3.79086,16 6,16 L6,16" id="路径" stroke="#212121" stroke-linejoin="round" stroke-width="1.5"></path> <path d="M6,16 L6,15.75 L6,14.5 L6,12 L6,8 C6,4.68629 8.6863,2 12,2 C15.3137,2 18,4.68629 18,8 L18,16 C18,19.3137 15.3137,22 12,22" id="路径" stroke="#212121" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path> </g> </g> </g> </g></svg>
+                          </div>
+                          <h3 class="card-title-white">Reliable. Silent. Long-Lasting.</h3>
+                          <p class="card-text-white" style="text-align: justify;">
+                              Experience uninterrupted power with Fuze’s high-efficiency lithium-ion
+                              batteries. Designed for consistent performance, minimal maintenance,
+                              and extended lifespan.
+                          </p>
+                          <p class="card-text-white" style="margin-bottom: 0;">
+                              Fuze sets new standards in power storage across Kerala.
+                          </p>
+                      </div>
+                      <button class="btn-trial">
+                          Contact Fuze
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <line x1="5" y1="12" x2="19" y2="12"/>
+                              <polyline points="12 5 19 12 12 19"/>
+                          </svg>
+                      </button>
+                  </div>
+                  
+              </div>
+          </section>
+
             <!-----------------------------------(why choose end)--------------------------->
 
             <!-------------------------------------(video)------------------------------------>
 
-             <!-- <section aria-label="section" class="relative p-0 overflow-hidden">
+             <section aria-label="section" class="relative p-0 overflow-hidden">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
@@ -1481,14 +1405,14 @@ document.addEventListener('DOMContentLoaded', function() {
                                         <div class="player bg-dark border-0 circle wow scaleIn"><span></span></div>
                                     </div> 
                                     <div class="absolute w-100 h-100 top-0 bg-dark hover-op-05"></div>
-                                    <img src="images/background/2.webp" class="w-100 hover-scale-1-1" alt="">
+                                    <img src="images/background/banner-video.webp" class="w-100 hover-scale-1-1" alt="">
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
 
-            </section> -->
+            </section>
 
             <!----------------------------------(video end)----------------------------------->
 
@@ -1546,7 +1470,7 @@ document.addEventListener('DOMContentLoaded', function() {
   .fuze-gallery-container {
     position: relative;
     width: 100%;
-    padding: 40px 0;
+    /* padding: 40px 0; */
   }
 
   .fuze-gallery-row {
@@ -1704,9 +1628,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <section class="fuze-gallery container">
   <div class="header-sections">
-    <div class="label-pill">
-      <p class="label-text">WHY CHOOSE US</p>
-    </div>
+    
     <h1 class="main-heading">
       Why <span class="highlight">expert.io</span> is The Right Choice for You
     </h1>
@@ -1849,21 +1771,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <!-- SECTION CODE END -->
 
-
-
-
-
-
-
-
-
-
-            
-
-           
-          
-
-           
+ 
             <!------------------------testimonial ---------------------------------------->
 
              <section class="text-light bg-dark no-top no-bottom overflow-hidden mx-3 mb-3 rounded-1">
@@ -1943,7 +1851,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <!-----------------------------(testimonial end)--------------------------------->
         </div>
         <!-- content close -->
-        <section class="pt-5 pb-0 overflow-hidden" aria-label="section">
+        <!-- <section class="pt-5 pb-0 overflow-hidden" aria-label="section">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -1951,95 +1859,358 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- footer begin -->
-        <footer class="text-light section-dark">
-            <div class="container">
-                <div class="row g-4 justify-content-between">
-                    <div class="col-md-6">
-                        <img src="images/logo/fuze_white.webp" class="w-170px mb-2" alt="">
-                        <div class="spacer-single"></div>
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <div class="widget">
-                                    <h5>Services</h5>
-                                    <ul>                                        
-                                        <li><a href="service-single.html">Trucking</a></li>
-                                        <li><a href="service-single.html">Air Freight</a></li>
-                                        <li><a href="service-single.html">Ship Freight</a></li>
-                                        <li><a href="service-single.html">Rail Freight</a></li>
-                                        <li><a href="service-single.html">Warehousing</a></li>
-                                        <li><a href="service-single.html">Customs Brokerage</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+        </section> -->
+        <!--------------------------------------(footer)-------------------------------------------->
+        <style>
+        /* ============================================================
+           SECTION 1: GLOBAL RESET & BASE STYLES
+           ============================================================ */
+      
 
-                            <div class="col-md-6">
-                                <div class="widget">
-                                    <h5>Company</h5>
-                                    <ul>                                        
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <!-- <li><a href="team.html">Our Team</a></li> -->
-                                        <li><a href="careers.html">Careers</a></li>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+        
 
+        .containers {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px 0px ;
+        }
 
-                        <div class="social-icons mb-sm-30 text-center">
-                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                        </div>
+        /* ============================================================
+           SECTION 2: FORM SECTION LAYOUT
+           ============================================================ */
+        .form-sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            margin-bottom: 80px;
+        }
+
+        /* ============================================================
+           SECTION 3: FORM CONTENT (LEFT SIDE)
+           ============================================================ */
+        .form-contents h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .form-contents p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* ============================================================
+           SECTION 4: FORM WRAPPER & INPUTS (RIGHT SIDE)
+           ============================================================ */
+        .form-wrappers {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-rows {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border-left: 1px solid #999;
+            border-bottom: 1px solid #999;
+            border-top: 0px;
+            border-right: 1px solid #999;
+            background: transparent;
+            font-size: 1rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #333;
+        }
+
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        /* ============================================================
+           SECTION 5: SUBMIT BUTTON
+           ============================================================ */
+        .submit-btns {
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 14px 40px;
+            font-size: 1rem;
+            cursor: pointer;
+            align-self: flex-end;
+            transition: background 0.3s;
+        }
+
+        .submit-btns:hover {
+            background: #333;
+        }
+
+        /* ============================================================
+           SECTION 6: FOOTER CONTAINER
+           ============================================================ */
+        footer {
+            background: #1a1a1a;
+            padding: 60px 40px 40px;
+        }
+
+        .footer-contents {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-tops {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 80px;
+            margin-bottom: 60px;
+        }
+
+        /* ============================================================
+           SECTION 7: LOGO SECTION (FOOTER LEFT)
+           ============================================================ */
+        .logo-sections {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .logos {
+            display: grid;
+            grid-template-columns: repeat(3, 30px);
+            gap: 8px;
+            width: fit-content;
+        }
+
+        .logo-squares {
+            width: 30px;
+            height: 30px;
+            background: #fff;
+            transform: rotate(45deg);
+        }
+
+        .logo-squares.empty {
+            background: transparent;
+        }
+
+        .brand-names {
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        /* ============================================================
+           SECTION 8: FOOTER LINKS (FOOTER RIGHT)
+           ============================================================ */
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .footer-columns h3 {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-columns ul {
+            list-style: none;
+        }
+
+        .footer-columns ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-columns ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .footer-columns ul li a:hover {
+            opacity: 0.7;
+        }
+
+        /* ============================================================
+           SECTION 9: FOOTER BOTTOM (COPYRIGHT & BACK TO TOP)
+           ============================================================ */
+        .footer-bottoms {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(26, 26, 26, 0.2);
+            color: #fff;
+        }
+
+        .back-to-tops {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #fff;
+            transition: background 0.3s;
+        }
+
+        .back-to-tops:hover {
+            background: rgba(26, 26, 26, 0.1);
+        }
+
+        /* ============================================================
+           SECTION 10: RESPONSIVE DESIGN (MOBILE)
+           ============================================================ */
+        @media (max-width: 768px) {
+            .form-sections {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .form-rows {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-tops {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-links {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-bottoms {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+
+    <!-- ============================================================
+         SECTION 11: MAIN FORM SECTION (HTML)
+         ============================================================ -->
+    <div class="containers">
+        <div class="form-sections">
+            <!-- Left Side: Content -->
+            <div class="form-contents">
+                <h1>Ready To Personalize Your Space?</h1>
+                <p>Our service is for people who believe in owning a safe, clean, and organized space. We promise that engaging with what we make will help you declutter your life.</p>
+            </div>
+            
+            <!-- Right Side: Form -->
+            <form class="form-wrappers">
+                <div class="form-rows">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <input type="tel" placeholder="Phone Number">
+                <textarea placeholder="Anything we should know?"></textarea>
+                <button type="submit" class="submit-btns">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         SECTION 12: FOOTER SECTION (HTML)
+         ============================================================ -->
+    <footer>
+        <div class="footer-contents">
+            <div class="footer-tops">
+                <!-- Footer Left: Logo -->
+                <div class="logo-sections">
+                    <div class="logos">
+                        <img src="./images/logo/fuze_white.webp" alt="">
                     </div>
+                    <p style="text-align: justify;">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                         Minus, ratione? Consequuntur voluptatibus modi ad neque
+                        sed.</p>
+                    
+                </div>
 
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <h2>Get in Touch</h2>
-                            <img src="images/ui/up-right-arrow.webp" class="w-60px op-5" alt="">
-                        </div>
-
-                        <div class="widget">
-                            <div class="op-5 fs-15">Email</div>
-                            <h3>contact@logixpress.com</h3>
-
-                            <div class="spacer-20"></div>      
-
-                            <div class="op-5 fs-15">Phone</div>
-                            <h3>+929 333 9296</h3>
-
-                            <div class="spacer-20"></div>
-
-                            <div class="op-5 fs-15">Office Location</div>
-                            <h3>100 S Main St, New York, NY</h3>
-
-                            <div class="spacer-20"></div>
-                      
-                        </div>
+                <!-- Footer Right: Links -->
+                <div class="footer-links">
+                    <div class="footer-columns">
+                        <h3>Useful Links</h3>
+                        <ul style="padding-left: 0;">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about.html">About</a></li>
+                            <li><a href="./careers.html">Careers</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html">Contact </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-columns">
+                        <h3>Our Products</h3>
+                        <ul style="padding-left: 0;">
+                            <li><a href="./tall_tubular_batteries.html">Tall Tubular Battery</a></li>
+                            <li><a href="./solar_batteries.html">Solar Batteries</a></li>
+                            <li><a href="./inverters.html">Inverter</a></li>
+                            <li><a href="./lithium_ion _battery.html">Lithium Ion Battery</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-columns">
+                        <h3>Social</h3>
+                        <ul style="padding-left: 0;">
+                            <li><a href="#instagram">Instagram</a></li>
+                            <li><a href="#linkedin">LinkedIn</a></li>
+                            <li><a href="#youtube">YouTube</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="subfooter">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            Copyright 2025 LogiXpress by Designesia
-                        </div>
-                    </div>
-                </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottoms" style="border-top: .5px solid #a9a9a9">
+                <span>© copyright 2026 FUZE BATTERIES. All Rights Reserved.</span>
+                <a href="#terms">Terms of Service</a>
+                <!-- <a href="#top" class="back-to-tops">Back to top ↑</a> -->
             </div>
-        </footer>
-        <!-- footer close -->
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         SECTION 13: JAVASCRIPT FUNCTIONALITY
+         ============================================================ -->
+    <script>
+        // Back to Top Button
+        document.querySelector('.back-to-tops').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Form Submission
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your submission! We will contact you soon.');
+        });
+    </script>
+
+     <!--------------------------------------(footer end)-------------------------------------------->
+
+
+
     </div>
 
     <!-- overlay content begin -->
-    <div id="extra-wrap" class="text-light">
+    <!-- <div id="extra-wrap" class="text-light">
         <div id="btn-close">
             <span></span>
             <span></span>
@@ -2082,7 +2253,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- overlay content end -->
 
     <!-- Javascript Files
