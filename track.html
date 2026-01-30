@@ -1,672 +1,763 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Why Choose Us - Two Column Layout</title>
-
-<style>
-
-
-.scontainer {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* ============================================
-   WHY CHOOSE US SECTION
-   ============================================ */
-.swhy-section {
-  padding: 80px 40px;
-}
-
-.swhy-title {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.swhy-title h2 {
-  font-size: 48px;
-  color: #1a3d5c;
-  font-weight: 800;
-  margin-bottom: 16px;
-  letter-spacing: -1px;
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
-
-.swhy-title h2::after {
-  content: "";
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background: #ff9500;
-  border-radius: 2px;
-}
-
-.swhy-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-/* ============================================
-   LEFT COLUMN - FEATURES LIST
-   ============================================ */
-.sfeatures-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.sfeature-item {
-  display: flex;
-  gap: 20px;
-  padding: 24px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.sfeature-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-}
-
-.sfeature-icon {
-  width: 60px;
-  height: 60px;
-  min-width: 60px;
-  font-size: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.sfeature-item:nth-child(1) .sfeature-icon {
-  background: #e3f2fd;
-}
-
-.sfeature-item:nth-child(2) .sfeature-icon {
-  background: #f3e5f5;
-}
-
-.sfeature-item:nth-child(3) .sfeature-icon {
-  background: #ffebee;
-}
-
-.sfeature-item:nth-child(4) .sfeature-icon {
-  background: #e8f5e9;
-}
-
-.sfeature-item:hover .sfeature-icon {
-  transform: scale(1.1);
-}
-
-.sfeature-content h3 {
-  font-size: 18px;
-  font-weight: 700;
-  color: #1a3d5c;
-  margin-bottom: 8px;
-  letter-spacing: -0.5px;
-}
-
-.sfeature-content p {
-  font-size: 13px;
-  line-height: 1.7;
-  color: #888;
-}
-
-/* ============================================
-   RIGHT COLUMN - IMAGE CONTAINER
-   ============================================ */
-.simage-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.simage-container {
-  width: 100%;
-  aspect-ratio: 1;
-  border: 4px solid #2196f3;
-  border-radius: 24px;
-  overflow: hidden;
-  background: #f5f5f5;
-  box-shadow: 0 10px 40px rgba(33, 150, 243, 0.2);
-}
-
-.simage-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.simage-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 100px;
-  color: #ddd;
-}
-
-/* ============================================
-   RESPONSIVE: 1920px+ (EXTRA LARGE)
-   ============================================ */
-@media (min-width: 1920px) {
-  .swhy-section {
-    padding: 100px 60px;
-  }
-
-  .swhy-title h2 {
-    font-size: 56px;
-  }
-
-  .swhy-wrapper {
-    gap: 80px;
-  }
-
-  .sfeature-item {
-    padding: 28px;
-    gap: 24px;
-  }
-
-  .sfeature-icon {
-    width: 70px;
-    height: 70px;
-    font-size: 36px;
-  }
-
-  .sfeature-content h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .sfeature-content p {
-    font-size: 14px;
-  }
-}
-
-/* ============================================
-   RESPONSIVE: 1200px - 1919px (LARGE DESKTOP)
-   ============================================ */
-@media (min-width: 1200px) and (max-width: 1919px) {
-  .swhy-section {
-    padding: 80px 40px;
-  }
-
-  .swhy-title h2 {
-    font-size: 48px;
-  }
-
-  .swhy-wrapper {
-    gap: 60px;
-  }
-
-  .sfeature-item {
-    padding: 24px;
-    gap: 20px;
-  }
-
-  .sfeature-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 32px;
-  }
-
-  .sfeature-content h3 {
-    font-size: 18px;
-  }
-
-  .sfeature-content p {
-    font-size: 13px;
-  }
-}
-
-/* ============================================
-   RESPONSIVE: 992px - 1199px (MEDIUM DESKTOP)
-   ============================================ */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .swhy-section {
-    padding: 60px 30px;
-  }
-
-  .swhy-title {
-    margin-bottom: 50px;
-  }
-
-  .swhy-title h2 {
-    font-size: 40px;
-  }
-
-  .swhy-title h2::after {
-    width: 50px;
-  }
-
-  .swhy-wrapper {
-    gap: 40px;
-  }
-
-  .sfeatures-list {
-    gap: 20px;
-  }
-
-  .sfeature-item {
-    padding: 20px;
-    gap: 16px;
-  }
-
-  .sfeature-icon {
-    width: 55px;
-    height: 55px;
-    font-size: 28px;
-  }
-
-  .sfeature-content h3 {
-    font-size: 16px;
-    margin-bottom: 6px;
-  }
-
-  .sfeature-content p {
-    font-size: 12px;
-  }
-
-  .simage-container {
-    border-width: 3px;
-    border-radius: 20px;
-  }
-}
-
-/* ============================================
-   RESPONSIVE: 768px - 991px (TABLET LANDSCAPE)
-   ============================================ */
-@media (min-width: 768px) and (max-width: 991px) {
-  .swhy-section {
-    padding: 50px 25px;
-  }
-
-  .swhy-title {
-    margin-bottom: 40px;
-  }
-
-  .swhy-title h2 {
-    font-size: 36px;
-  }
-
-  .swhy-title h2::after {
-    width: 45px;
-  }
-
-  .swhy-wrapper {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .sfeatures-list {
-    gap: 18px;
-  }
-
-  .sfeature-item {
-    padding: 18px;
-    gap: 14px;
-  }
-
-  .sfeature-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-  }
-
-  .sfeature-content h3 {
-    font-size: 15px;
-  }
-
-  .sfeature-content p {
-    font-size: 12px;
-  }
-
-  .simage-container {
-    border-width: 3px;
-    border-radius: 16px;
-  }
-}
-
-/* ============================================
-   RESPONSIVE: 576px - 767px (TABLET PORTRAIT)
-   ============================================ */
-@media (min-width: 576px) and (max-width: 767px) {
-  .swhy-section {
-    padding: 40px 20px;
-  }
-
-  .swhy-title {
-    margin-bottom: 35px;
-  }
-
-  .swhy-title h2 {
-    font-size: 32px;
-  }
-
-  .swhy-title h2::after {
-    width: 40px;
-  }
-
-  .swhy-wrapper {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .sfeatures-list {
-    gap: 16px;
-  }
-
-  .sfeature-item {
-    padding: 16px;
-    gap: 12px;
-  }
-
-  .sfeature-icon {
-    width: 48px;
-    height: 48px;
-    font-size: 22px;
-  }
-
-  .sfeature-content h3 {
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-
-  .sfeature-content p {
-    font-size: 11px;
-    line-height: 1.6;
-  }
-
-  .simage-container {
-    border-width: 2px;
-    border-radius: 14px;
-  }
-}
-
-/* ============================================
-   RESPONSIVE: 480px - 575px (LARGE MOBILE)
-   ============================================ */
-@media (min-width: 480px) and (max-width: 575px) {
- 
-
-  .scontainer {
-    padding: 0 15px;
-  }
-
-  .swhy-section {
-    padding: 35px 18px;
-  }
-
-  .swhy-title {
-    margin-bottom: 30px;
-  }
-
-  .swhy-title h2 {
-    font-size: 28px;
-  }
-
-  .swhy-title h2::after {
-    width: 35px;
-  }
-
-  .swhy-wrapper {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .sfeatures-list {
-    gap: 14px;
-  }
-
-  .sfeature-item {
-    padding: 14px;
-    gap: 12px;
-    border-radius: 10px;
-  }
-
-  .sfeature-icon {
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-    border-radius: 6px;
-  }
-
-  .sfeature-content h3 {
-    font-size: 13px;
-  }
-
-  .sfeature-content p {
-    font-size: 10px;
-  }
-
-  .simage-container {
-    border-width: 2px;
-    border-radius: 12px;
-  }
-}
-
-/* ============================================
-   RESPONSIVE: 375px - 479px (SMALL MOBILE)
-   ============================================ */
-@media (min-width: 375px) and (max-width: 479px) {
- 
-
-  .scontainer {
-    padding: 0 12px;
-  }
-
-  .swhy-section {
-    padding: 30px 16px;
-  }
-
-  .swhy-title {
-    margin-bottom: 25px;
-  }
-
-  .swhy-title h2 {
-    font-size: 24px;
-  }
-
-  .swhy-title h2::after {
-    width: 30px;
-  }
-
-  .swhy-wrapper {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .sfeatures-list {
-    gap: 12px;
-  }
-
-  .sfeature-item {
-    padding: 12px;
-    gap: 10px;
-    border-radius: 8px;
-  }
-
-  .sfeature-icon {
-    width: 42px;
-    height: 42px;
-    font-size: 18px;
-    border-radius: 6px;
-  }
-
-  .sfeature-content h3 {
-    font-size: 12px;
-  }
-
-  .sfeature-content p {
-    font-size: 10px;
-  }
-
-  .simage-container {
-    border-width: 2px;
-    border-radius: 10px;
-  }
-}
-
-/* ============================================
-   RESPONSIVE: Under 375px (EXTRA SMALL MOBILE)
-   ============================================ */
-@media (max-width: 374px) {
- 
-
-  .scontainer {
-    padding: 0 10px;
-  }
-
-  .swhy-section {
-    padding: 25px 14px;
-  }
-
-  .swhy-title {
-    margin-bottom: 20px;
-  }
-
-  .swhy-title h2 {
-    font-size: 20px;
-  }
-
-  .swhy-title h2::after {
-    width: 25px;
-    bottom: -10px;
-  }
-
-  .swhy-wrapper {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .sfeatures-list {
-    gap: 10px;
-  }
-
-  .sfeature-item {
-    padding: 11px;
-    gap: 8px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  }
-
-  .sfeature-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-    border-radius: 5px;
-  }
-
-  .sfeature-content h3 {
-    font-size: 11px;
-    margin-bottom: 4px;
-  }
-
-  .sfeature-content p {
-    font-size: 9px;
-    line-height: 1.4;
-  }
-
-  .simage-container {
-    border-width: 2px;
-    border-radius: 8px;
-  }
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="scontainer">
-
-  <!-- ============================================
-       WHY CHOOSE US SECTION
-       ============================================ -->
-  <section class="swhy-section">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board of Directors</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Title -->
-    <div class="swhy-title">
-      <h2>Why Choose Us?</h2>
-    </div>
+    <style>
+        :root {
+            --primary-dark: #1a1a2e;
+            --primary-blue: #0f4c81;
+            --accent-gold: #d4af37;
+            --text-dark: #2d2d2d;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --border-light: #e5e7eb;
+            --white: #ffffff;
+        }
 
-    <!-- Main Wrapper -->
-    <div class="swhy-wrapper">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      <!-- Left Column - Features List -->
-      <div class="sfeatures-list">
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
 
-        <!-- Feature Item 1 -->
-        <div class="sfeature-item">
-          <div class="sfeature-icon">⏱️</div>
-          <div class="sfeature-content">
-            <h3>Less Time in the Chair</h3>
-            <p>Justo non dolor lectus ac egestas dictum. Leo tempus nec amet fringilla. Eu semper velit tristique semper. Laoreet mi lacus nisl diam in.</p>
-          </div>
+        /* Board Section */
+        .sboard-section {
+            padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 80px);
+            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+        }
+
+        .sboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Section Header */
+        .ssection-header {
+            text-align: center;
+            margin-bottom: clamp(50px, 8vw, 80px);
+            position: relative;
+        }
+
+        .ssection-label {
+            font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+            color: var(--primary-blue);
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .ssection-label::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--accent-gold);
+        }
+
+        .ssection-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .ssection-description {
+            font-size: clamp(0.95rem, 1.8vw, 1.125rem);
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* Board Carousel */
+        .sboard-carousel-wrapper {
+            position: relative;
+            margin-bottom: 60px;
+        }
+
+        .sboard-swiper {
+            width: 100%;
+            padding: clamp(12px, 2vw, 40px) 0;
+        }
+
+        .swiper-slide {
+            height: auto;
+            display: flex;
+        }
+
+        /* Navigation Controls */
+        .scarousel-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: clamp(12px, 2vw, 20px);
+            margin-bottom: clamp(24px, 5vw, 40px);
+        }
+
+        .sswiper-button-next,
+        .sswiper-button-prev {
+            position: relative;
+            width: clamp(40px, 8vw, 50px);
+            height: clamp(40px, 8vw, 50px);
+            background: var(--white);
+            border: 2px solid var(--primary-blue);
+            border-radius: 50%;
+            color: var(--primary-blue);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: bold;
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: 0;
+        }
+
+        .sswiper-button-next::after,
+        .sswiper-button-prev::after {
+            content: '';
+        }
+
+        .sswiper-button-next:hover,
+        .sswiper-button-prev:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: scale(1.1);
+            box-shadow: 0 4px 16px rgba(15, 76, 129, 0.3);
+        }
+
+        /* Play-Pause Button */
+        .splay-pause-btn {
+            width: clamp(44px, 8vw, 56px);
+            height: clamp(44px, 8vw, 56px);
+            border-radius: 50%;
+            border: none;
+            background: var(--accent-gold);
+            color: var(--white);
+            cursor: pointer;
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+        }
+
+        .splay-pause-btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Swiper Pagination */
+        .sswiper-pagination {
+            position: relative !important;
+            margin-top: clamp(16px, 3vw, 30px);
+        }
+
+        .sswiper-pagination-bullet {
+            background: #cbd5e1;
+            opacity: 1;
+            width: clamp(8px, 1.5vw, 10px);
+            height: clamp(8px, 1.5vw, 10px);
+            transition: all 0.3s ease;
+        }
+
+        .sswiper-pagination-bullet-active {
+            background: var(--primary-blue);
+            width: clamp(20px, 3vw, 30px);
+            border-radius: 5px;
+        }
+
+        /* Director Card */
+        .sdirector-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .sdirector-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--accent-gold));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .sdirector-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .sdirector-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* Director Image */
+        .sdirector-image {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #e5e7eb 0%, #f3f4f6 100%);
+            max-height: 280px;
+        }
+
+        .sdirector-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            filter: grayscale(20%);
+        }
+
+        .sdirector-card:hover .sdirector-image img {
+            transform: scale(1.1);
+            filter: grayscale(0%);
+        }
+
+        .sdirector-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(26, 26, 46, 0.8) 0%, transparent 100%);
+            padding: 24px;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .sdirector-card:hover .sdirector-overlay {
+            transform: translateY(0);
+        }
+
+        .sdirector-quote {
+            color: var(--white);
+            font-size: 0.875rem;
+            font-style: italic;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Director Info */
+        .sdirector-info {
+            padding: clamp(16px, 3vw, 24px);
+        }
+
+        .sdirector-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: var(--primary-dark);
+            font-weight: 700;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .sdirector-role {
+            font-size: clamp(0.8rem, 1.4vw, 0.9rem);
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: 0.05em;
+        }
+
+        .sdirector-bio {
+            font-size: clamp(0.8rem, 1.4vw, 0.875rem);
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 12px;
+            font-weight: 300;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .sdirector-details {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding-top: 10px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .sdetail-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .sdetail-icon {
+            width: 14px;
+            height: 14px;
+            color: var(--accent-gold);
+        }
+
+        /* Social Links */
+        .sdirector-social {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .ssocial-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--bg-light);
+            border: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.8rem;
+        }
+
+        .ssocial-btn:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+            border-color: var(--primary-blue);
+            transform: translateY(-2px);
+        }
+
+        /* Stats Section */
+        .sboard-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-top: 60px;
+            padding: clamp(40px, 6vw, 60px);
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .sstat-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .sstat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--primary-blue);
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .sstat-label {
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            color: var(--text-light);
+            font-weight: 400;
+            letter-spacing: 0.05em;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .scarousel-controls {
+                gap: 8px;
+            }
+
+            .sboard-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .sdirector-card {
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .sdirector-card:nth-child(1) { animation-delay: 0.1s; }
+        .sdirector-card:nth-child(2) { animation-delay: 0.2s; }
+        .sdirector-card:nth-child(3) { animation-delay: 0.3s; }
+        .sdirector-card:nth-child(4) { animation-delay: 0.4s; }
+        .sdirector-card:nth-child(5) { animation-delay: 0.5s; }
+        .sdirector-card:nth-child(6) { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <section class="sboard-section">
+        <div class="sboard-container">
+            <!-- Section Header -->
+            <div class="ssection-header">
+                <div class="ssection-label">Leadership</div>
+                <h2 class="ssection-title">Meet Our Board of Directors</h2>
+                <p class="ssection-description">
+                    Experienced leaders guiding our vision with decades of combined expertise in global business, innovation, and strategic growth.
+                </p>
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="scarousel-controls">
+                <button class="sswiper-button-prev" aria-label="Previous">‹</button>
+                <button class="splay-pause-btn" id="splayPauseBtn" aria-label="Play/Pause">⏸</button>
+                <button class="sswiper-button-next" aria-label="Next">›</button>
+            </div>
+
+            <!-- Board Carousel -->
+            <div class="sboard-carousel-wrapper">
+                <div class="swiper sboard-swiper" id="sboardSwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Director 1 -->
+                        <div class="swiper-slide">
+                            <div class="sdirector-card">
+                                <div class="sdirector-image">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&h=600&fit=crop" alt="Robert Anderson">
+                                    <div class="sdirector-overlay">
+                                        <p class="sdirector-quote">"Leading with integrity and innovation has been the cornerstone of our success."</p>
+                                    </div>
+                                </div>
+                                <div class="sdirector-info">
+                                    <h3 class="sdirector-name">Robert Anderson</h3>
+                                    <p class="sdirector-role">Chairman of the Board</p>
+                                    <p class="sdirector-bio">
+                                        30+ years of executive leadership in Fortune 500 companies, specializing in strategic transformation and corporate governance.
+                                    </p>
+                                    <div class="sdirector-details">
+                                        <div class="sdetail-item">
+                                            <span class="sdetail-icon">📍</span>
+                                            <span>New York, USA</span>
+                                        </div>
+                                        <div class="sdetail-item">
+                                            <span class="sdetail-icon">🎓</span>
+                                            <span>MBA, Harvard Business School</span>
+                                        </div>
+                                    </div>
+                                    <div class="sdirector-social">
+                                        <a href="#" class="ssocial-btn" aria-label="LinkedIn">in</a>
+                                        <a href="#" class="ssocial-btn" aria-label="Twitter">𝕏</a>
+                                        <a href="#" class="ssocial-btn" aria-label="Email">✉</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Director 2 -->
+                        <div class="swiper-slide">
+                            <div class="sdirector-card">
+                                <div class="sdirector-image">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=600&fit=crop" alt="Dr. Patricia Chen">
+                                    <div class="sdirector-overlay">
+                                        <p class="sdirector-quote">"Innovation thrives when we combine vision with disciplined execution."</p>
+                                    </div>
+                                </div>
+                                <div class="sdirector-info">
+                                    <h3 class="sdirector-name">Dr. Patricia Chen</h3>
+                                    <p class="sdirector-role">Independent Director</p>
+                                    <p class="sdirector-bio">
+                                        Technology innovator and venture capitalist with expertise in AI, fintech, and sustainable business practices.
+                                    </p>
+                                    <div class="sdirector-details">
+                                        <div class="sdetail-item">
+                                            <span class="sdetail-icon">📍</span>
+                                            <span>San Francisco, USA</span>
+                                        </div>
+                                        <div class="sdetail-item">
+                                            <span class="sdetail-icon">🎓</span>
+                                            <span>PhD, Stanford University</span>
+                                        </div>
+                                    </div>
+                                    <div class="sdirector-social">
+                                        <a href="#" class="ssocial-btn" aria-label="LinkedIn">in</a>
+                                        <a href="#" class="ssocial-btn" aria-label="Twitter">𝕏</a>
+                                        <a href="#" class="ssocial-btn" aria-label="Email">✉</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Director 3 -->
+                        <div class="swiper-slide">
+                            <div class="sdirector-card">
+                                <div class="sdirector-image">
+                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&h=600&fit=crop" alt="James Mitchell">
+                                    <div class="sdirector-overlay">
+                                        <p class="sdirector-quote">"Financial prudence and bold vision must go hand in hand."</p>
+                                    </div>
+                                </div>
+                                <div class="sdirector-info">
+                                    <h3 class="sdirector-name">James Mitchell</h3>
+                                    <p class="sdirector-role">Audit Committee Chair</p>
+                                    <p class="sdirector-bio">
+                                        Former CFO with extensive experience in financial oversight, risk management, and international markets.
+                                    </p>
+                                    <div class="sdirector-details">
+                                        <div class="sdetail-item">
+                                            <span class="sdetail-icon">📍</span>
+                                            <span>London, UK</span>
+                                        </div>
+                                        <div class="sdetail-item">
+                                            <span class="sdetail-icon">🎓</span>
+                                            <span>CPA, London School of Economics</span>
+                                        </div>
+                                    </div>
+                                    <div class="sdirector-social">
+                                        <a href="#" class="ssocial-btn" aria-label="LinkedIn">in</a>
+                                        <a href="#" class="ssocial-btn" aria-label="Twitter">𝕏</a>
+                                        <a href="#" class="ssocial-btn" aria-label="Email">✉</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Director 4 -->
+                        <div class="swiper-slide">
+                            <div class="sdirector-card">
+                                <div class="sdirector-image">
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&h=600&fit=crop" alt="Maria Rodriguez">
+                                    <div class="sdirector-overlay">
+                                        <p class="sdirector-quote">"Sustainability isn't just good ethics—it's good business."</p>
+                                    </div>
+                                </div>
+                                <div class="sdirector-info">
+                                    <h3 class="sdirector-name">Maria Rodriguez</h3>
+                                    <p class="sdirector-role">ESG Director</p>
+                                    <p class="sdirector-bio">
+                                        Champion of environmental sustainability and corporate social responsibility with a track record of transformative impact.
+                                    </p>
+                                    <div class="sdirector-details">
+                                        <div class="sdetail-item">
+                                            <span class="sdetail-icon">📍</span>
+                                            <span>Barcelona, Spain</span>
+                                        </div>
+                                        <div class="sdetail-item">
+                                            <span class="sdetail-icon">🎓</span>
+                                            <span>MSc, INSEAD</span>
+                                        </div>
+                                    </div>
+                                    <div class="sdirector-social">
+                                        <a href="#" class="ssocial-btn" aria-label="LinkedIn">in</a>
+                                        <a href="#" class="ssocial-btn" aria-label="Twitter">𝕏</a>
+                                        <a href="#" class="ssocial-btn" aria-label="Email">✉</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Director 5 -->
+                        <div class="swiper-slide">
+                            <div class="sdirector-card">
+                                <div class="sdirector-image">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=600&fit=crop" alt="David Thompson">
+                                    <div class="sdirector-overlay">
+                                        <p class="sdirector-quote">"Great companies are built on trust, transparency, and performance."</p>
+                                    </div>
+                                </div>
+                                <div class="sdirector-info">
+                                    <h3 class="sdirector-name">David Thompson</h3>
+                                    <p class="sdirector-role">Compensation Committee Chair</p>
+                                    <p class="sdirector-bio">
+                                        HR strategist and organizational development expert focused on building high-performance cultures.
+                                    </p>
+                                    <div class="sdirector-details">
+                                        <div class="sdetail-item">
+                                            <span class="sdetail-icon">📍</span>
+                                            <span>Toronto, Canada</span>
+                                        </div>
+                                        <div class="sdetail-item">
+                                            <span class="sdetail-icon">🎓</span>
+                                            <span>MBA, Wharton School</span>
+                                        </div>
+                                    </div>
+                                    <div class="sdirector-social">
+                                        <a href="#" class="ssocial-btn" aria-label="LinkedIn">in</a>
+                                        <a href="#" class="ssocial-btn" aria-label="Twitter">𝕏</a>
+                                        <a href="#" class="ssocial-btn" aria-label="Email">✉</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Director 6 -->
+                        <div class="swiper-slide">
+                            <div class="sdirector-card">
+                                <div class="sdirector-image">
+                                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=500&h=600&fit=crop" alt="Aisha Patel">
+                                    <div class="sdirector-overlay">
+                                        <p class="sdirector-quote">"Digital transformation requires both courage and careful planning."</p>
+                                    </div>
+                                </div>
+                                <div class="sdirector-info">
+                                    <h3 class="sdirector-name">Aisha Patel</h3>
+                                    <p class="sdirector-role">Technology Advisor</p>
+                                    <p class="sdirector-bio">
+                                        Former tech CEO and digital transformation specialist with deep expertise in scaling global operations.
+                                    </p>
+                                    <div class="sdirector-details">
+                                        <div class="sdetail-item">
+                                            <span class="sdetail-icon">📍</span>
+                                            <span>Singapore</span>
+                                        </div>
+                                        <div class="sdetail-item">
+                                            <span class="sdetail-icon">🎓</span>
+                                            <span>MS, MIT</span>
+                                        </div>
+                                    </div>
+                                    <div class="sdirector-social">
+                                        <a href="#" class="ssocial-btn" aria-label="LinkedIn">in</a>
+                                        <a href="#" class="ssocial-btn" aria-label="Twitter">𝕏</a>
+                                        <a href="#" class="ssocial-btn" aria-label="Email">✉</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="swiper-pagination sswiper-pagination"></div>
+                </div>
+            </div>
+
+            <!-- Board Statistics -->
+            <div class="sboard-stats">
+                <div class="sstat-item">
+                    <div class="sstat-number">150+</div>
+                    <div class="sstat-label">Years Combined Experience</div>
+                </div>
+                <div class="sstat-item">
+                    <div class="sstat-number">6</div>
+                    <div class="sstat-label">Board Members</div>
+                </div>
+                <div class="sstat-item">
+                    <div class="sstat-number">12</div>
+                    <div class="sstat-label">Countries Represented</div>
+                </div>
+                <div class="sstat-item">
+                    <div class="sstat-number">100%</div>
+                    <div class="sstat-label">Independent Directors</div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Feature Item 2 -->
-        <div class="sfeature-item">
-          <div class="sfeature-icon">⚡</div>
-          <div class="sfeature-content">
-            <h3>More Efficient</h3>
-            <p>Justo non dolor lectus ac egestas dictum. Leo tempus nec amet fringilla. Eu semper velit tristique semper. Laoreet mi lacus nisl diam in.</p>
-          </div>
-        </div>
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script>
+        let sboardSwiper = new Swiper('#sboardSwiper', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            speed: 600,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.sswiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.sswiper-button-next',
+                prevEl: '.sswiper-button-prev',
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 16,
+                },
+                480: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 18,
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 28,
+                },
+                1280: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1440: {
+                    slidesPerView: 3,
+                    spaceBetween: 32,
+                },
+                1920: {
+                    slidesPerView: 4,
+                    spaceBetween: 36,
+                },
+            },
+        });
 
-        <!-- Feature Item 3 -->
-        <div class="sfeature-item">
-          <div class="sfeature-icon">⏳</div>
-          <div class="sfeature-content">
-            <h3>Longer Lasting</h3>
-            <p>Justo non dolor lectus ac egestas dictum. Leo tempus nec amet fringilla. Eu semper velit tristique semper. Laoreet mi lacus nisl diam in.</p>
-          </div>
-        </div>
+        // Play/Pause functionality
+        const splayPauseBtn = document.getElementById('splayPauseBtn');
+        let isPlaying = true;
 
-        <!-- Feature Item 4 -->
-        <div class="sfeature-item">
-          <div class="sfeature-icon">😊</div>
-          <div class="sfeature-content">
-            <h3>More Comfortable Experience</h3>
-            <p>Justo non dolor lectus ac egestas dictum. Leo tempus nec amet fringilla. Eu semper velit tristique semper. Laoreet mi lacus nisl diam in.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Right Column - Image Container -->
-      <div class="simage-wrapper">
-        <div class="simage-container">
-          <div class="simage-placeholder">📷</div>
-          <!-- To add your image, replace placeholder with:
-          <img src="your-image.jpg" alt="Why Choose Us">
-          -->
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-</div>
-
+        if (splayPauseBtn) {
+            splayPauseBtn.addEventListener('click', () => {
+                if (isPlaying) {
+                    sboardSwiper.autoplay.stop();
+                    splayPauseBtn.textContent = '▶';
+                    isPlaying = false;
+                } else {
+                    sboardSwiper.autoplay.start();
+                    splayPauseBtn.textContent = '⏸';
+                    isPlaying = true;
+                }
+            });
+        }
+    </script>
 </body>
 </html>

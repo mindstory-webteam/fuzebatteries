@@ -925,7 +925,7 @@
             <li class="check">Depth of Discharge : 80%</li>
         </ul>
 
-        <button class="btn">Call</button>
+        <!-- <button class="btn">Call</button> -->
     </li>
 
     <!-- Li-UPS 1100 / 12V (Inbuilt Battery) -->
@@ -947,7 +947,7 @@
             <li class="check">Wall Mounted Design</li>
         </ul>
 
-        <button class="btn">Call</button>
+        <!-- <button class="btn">Call</button> -->
     </li>
 
     <!-- Li-UPS 5000 / 48V -->
@@ -969,7 +969,7 @@
             <li class="check">Depth of Discharge : 80%</li>
         </ul>
 
-        <button class="btn">Call</button>
+        <!-- <button class="btn">Call</button> -->
     </li>
 
 </ul>
@@ -986,400 +986,376 @@
         </div>
         <!-- content close -->
 
-
-
-        <!--------------------------------------(footer)-------------------------------------------->
         <style>
-        /* ============================================================
-           SECTION 1: GLOBAL RESET & BASE STYLES
-           ============================================================ */
-      
+/* ============================================================
+   SECTION 1: GLOBAL RESET & BASE STYLES
+   ============================================================ */
 
+.containers {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px 0px;
+}
+
+/* ============================================================
+   SECTION 2: FORM SECTION LAYOUT
+   ============================================================ */
+.form-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-bottom: 80px;
+}
+
+/* ============================================================
+   SECTION 3: FORM CONTENT (LEFT SIDE)
+   ============================================================ */
+.form-contents h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.form-contents p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* ============================================================
+   SECTION 4: FORM WRAPPER & INPUTS (RIGHT SIDE)
+   ============================================================ */
+.form-wrappers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-rows {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 14px 16px;
+    border-left: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-top: 0px;
+    border-right: 1px solid #999;
+    background: transparent;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #333;
+}
+
+select {
+    cursor: pointer;
+    color: #666;
+}
+
+select option {
+    background: #fff;
+    color: #333;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* ============================================================
+   SECTION 5: SUBMIT BUTTON
+   ============================================================ */
+.submit-btns {
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: background 0.3s;
+}
+
+.submit-btns:hover {
+    background: #333;
+}
+
+/* ============================================================
+   SECTION 6: FOOTER CONTAINER
+   ============================================================ */
+footer {
+    background: #1a1a1a;
+    padding: 60px 40px 40px;
+}
+
+.footer-contents {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-tops {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 80px;
+    margin-bottom: 60px;
+}
+
+/* ============================================================
+   SECTION 7: LOGO SECTION (FOOTER LEFT)
+   ============================================================ */
+.logo-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.logos {
+    display: grid;
+    grid-template-columns: repeat(3, 30px);
+    gap: 8px;
+    width: fit-content;
+}
+
+.logo-squares {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+.logo-squares.empty {
+    background: transparent;
+}
+
+.brand-names {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+/* ============================================================
+   SECTION 8: FOOTER LINKS (FOOTER RIGHT)
+   ============================================================ */
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer-columns h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-columns ul {
+    list-style: none;
+}
+
+.footer-columns ul li {
+    margin-bottom: 12px;
+}
+
+.footer-columns ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.footer-columns ul li a:hover {
+    opacity: 0.7;
+}
+
+/* ============================================================
+   SECTION 9: FOOTER BOTTOM (COPYRIGHT & BACK TO TOP)
+   ============================================================ */
+.footer-bottoms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(26, 26, 26, 0.2);
+    color: #fff;
+}
+
+.back-to-tops {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid #fff;
+    transition: background 0.3s;
+}
+
+.back-to-tops:hover {
+    background: rgba(26, 26, 26, 0.1);
+}
+
+/* ============================================================
+   SECTION 10: RESPONSIVE DESIGN (MOBILE)
+   ============================================================ */
+@media (max-width: 768px) {
+    .form-sections {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .form-rows {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-tops {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottoms {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+</style>
+
+<!-- ============================================================
+     SECTION 11: MAIN FORM SECTION (HTML)
+     ============================================================ -->
+<div style="background-color: #f8f8f8;">
+     <div class="containers">
+    <div class="form-sections">
+        <!-- Left Side: Content -->
+        <div class="form-contents">
+            <h1>Let's Build Smarter Power Solutions.</h1>
+            <p>Have questions about lithium-ion batteries or UPS systems? Reach out to us for expert guidance, product details, and customized power solutions built for modern energy demands.</p>
+        </div>
         
-
-        .containers {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 40px 0px ;
-        }
-
-        /* ============================================================
-           SECTION 2: FORM SECTION LAYOUT
-           ============================================================ */
-        .form-sections {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: start;
-            margin-bottom: 80px;
-        }
-
-        /* ============================================================
-           SECTION 3: FORM CONTENT (LEFT SIDE)
-           ============================================================ */
-        .form-contents h1 {
-            font-size: 2.5rem;
-            font-weight: 400;
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
-
-        .form-contents p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #666;
-        }
-
-        /* ============================================================
-           SECTION 4: FORM WRAPPER & INPUTS (RIGHT SIDE)
-           ============================================================ */
-        .form-wrappers {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .form-rows {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 14px 16px;
-            border-left: 1px solid #999;
-            border-bottom: 1px solid #999;
-            border-top: 0px;
-            border-right: 1px solid #999;
-            background: transparent;
-            font-size: 1rem;
-            font-family: inherit;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-
-        input:focus, textarea:focus {
-            border-color: #333;
-        }
-
-        textarea {
-            min-height: 80px;
-            resize: vertical;
-        }
-
-        /* ============================================================
-           SECTION 5: SUBMIT BUTTON
-           ============================================================ */
-        .submit-btns {
-            background: #1a1a1a;
-            color: white;
-            border: none;
-            padding: 14px 40px;
-            font-size: 1rem;
-            cursor: pointer;
-            align-self: flex-end;
-            transition: background 0.3s;
-        }
-
-        .submit-btns:hover {
-            background: #333;
-        }
-
-        /* ============================================================
-           SECTION 6: FOOTER CONTAINER
-           ============================================================ */
-        footer {
-            background: #1a1a1a;
-            padding: 60px 40px 40px;
-        }
-
-        .footer-contents {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-tops {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 80px;
-            margin-bottom: 60px;
-        }
-
-        /* ============================================================
-           SECTION 7: LOGO SECTION (FOOTER LEFT)
-           ============================================================ */
-        .logo-sections {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .logos {
-            display: grid;
-            grid-template-columns: repeat(3, 30px);
-            gap: 8px;
-            width: fit-content;
-        }
-
-        .logo-squares {
-            width: 30px;
-            height: 30px;
-            background: #fff;
-            transform: rotate(45deg);
-        }
-
-        .logo-squares.empty {
-            background: transparent;
-        }
-
-        .brand-names {
-            font-size: 2.5rem;
-            font-weight: 400;
-            color: #fff;
-        }
-
-        /* ============================================================
-           SECTION 8: FOOTER LINKS (FOOTER RIGHT)
-           ============================================================ */
-        .footer-links {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-        }
-
-        .footer-columns h3 {
-            font-size: 1.25rem;
-            font-weight: 400;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-
-        .footer-columns ul {
-            list-style: none;
-        }
-
-        .footer-columns ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer-columns ul li a {
-            color: #fff;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-
-        .footer-columns ul li a:hover {
-            opacity: 0.7;
-        }
-
-        /* ============================================================
-           SECTION 9: FOOTER BOTTOM (COPYRIGHT & BACK TO TOP)
-           ============================================================ */
-        .footer-bottoms {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(26, 26, 26, 0.2);
-            color: #fff;
-        }
-
-        .back-to-tops {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #fff;
-            text-decoration: none;
-            padding: 8px 16px;
-            border: 1px solid #fff;
-            transition: background 0.3s;
-        }
-
-        .back-to-tops:hover {
-            background: rgba(26, 26, 26, 0.1);
-        }
-
-        /* ============================================================
-           SECTION 10: RESPONSIVE DESIGN (MOBILE)
-           ============================================================ */
-        @media (max-width: 768px) {
-            .form-sections {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .form-rows {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-tops {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .footer-links {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .footer-bottoms {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
-        }
-    </style>
-
-    <!-- ============================================================
-         SECTION 11: MAIN FORM SECTION (HTML)
-         ============================================================ -->
-    <div class="containers">
-        <div class="form-sections">
-            <!-- Left Side: Content -->
-            <div class="form-contents">
-                <h1>Ready To Personalize Your Space?</h1>
-                <p>Our service is for people who believe in owning a safe, clean, and organized space. We promise that engaging with what we make will help you declutter your life.</p>
+        <!-- Right Side: Form -->
+        <form class="form-wrappers">
+            <div class="form-rows">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
             </div>
+            <input type="tel" placeholder="Phone Number">
             
-            <!-- Right Side: Form -->
-            <form class="form-wrappers">
-                <div class="form-rows">
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                </div>
-                <input type="tel" placeholder="Phone Number">
-                <textarea placeholder="Anything we should know?"></textarea>
-                <button type="submit" class="submit-btns">Submit</button>
-            </form>
-        </div>
+            <!-- Service Selection Dropdown -->
+            <select name="service" required>
+                <option value="" disabled selected>Select Service</option>
+                <option value="booking-batteries-inverter">Booking Batteries & Inverter</option>
+                <option value="battery-services">Battery Services</option>
+            </select>
+            
+            <!-- Booking Date -->
+            <!-- <input type="date" placeholder="Preferred Booking Date" required> -->
+            
+            <textarea placeholder="Anything we should know?"></textarea>
+            <button type="submit" class="submit-btns">Submit</button>
+        </form>
     </div>
+</div>
 
-    <!-- ============================================================
-         SECTION 12: FOOTER SECTION (HTML)
-         ============================================================ -->
-    <footer>
-        <div class="footer-contents">
-            <div class="footer-tops">
-                <!-- Footer Left: Logo -->
-                <div class="logo-sections">
-                    <div class="logos">
-                        <img src="./images/logo/fuze_white.webp" alt="">
-                    </div>
-                    <p style="text-align: justify;">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                         Minus, ratione? Consequuntur voluptatibus modi ad neque
-                        sed.</p>
-                    
-                </div>
+  <!-- ============================================================
+      SECTION 12: FOOTER SECTION (HTML)
+      ============================================================ -->
+  <footer>
+      <div class="footer-contents">
+          <div class="footer-tops">
+              <!-- Footer Left: Logo -->
+              <div class="logo-sections">
+                  <div class="logos">
+                      <img src="./images/logo/fuze_white.webp" alt="">
+                  </div>
+                  <p style="text-align: justify;">
+                    We are here to help you every step of the way.
+                     For any enquiries or support, feel free to connect
+                      with us our team will get back to you promptly with
+                       the right solutions.</p>
+                  
+              </div>
 
-                <!-- Footer Right: Links -->
-                <div class="footer-links">
-                    <div class="footer-columns">
-                        <h3>Useful Links</h3>
-                        <ul style="padding-left: 0;">
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./about.html">About</a></li>
-                            <li><a href="./careers.html">Careers</a></li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact </a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-columns">
-                        <h3>Our Products</h3>
-                        <ul style="padding-left: 0;">
-                            <li><a href="./tall_tubular_batteries.html">Tall Tubular Battery</a></li>
-                            <li><a href="./solar_batteries.html">Solar Batteries</a></li>
-                            <li><a href="./inverters.html">Inverter</a></li>
-                            <li><a href="./lithium_ion _battery.html">Lithium Batteries</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-columns">
-                        <h3>Social</h3>
-                        <ul style="padding-left: 0;">
-                            <li><a href="#instagram">Instagram</a></li>
-                            <li><a href="#linkedin">LinkedIn</a></li>
-                            <li><a href="#youtube">YouTube</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+              <!-- Footer Right: Links -->
+              <div class="footer-links">
+                  <div class="footer-columns">
+                      <h3>Useful Links</h3>
+                      <ul style="padding-left: 0;">
+                          <li><a href="./index.html">Home</a></li>
+                          <li><a href="./about.html">About</a></li>
+                          <li><a href="./careers.html">Careers</a></li>
+                          <li><a href="./blog.html">Blog</a></li>
+                          <li><a href="./contact.html">Contact </a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-columns">
+                      <h3>Our Products</h3>
+                      <ul style="padding-left: 0;">
+                          <li><a href="./tall_tubular_batteries.html">Tall Tubular Battery</a></li>
+                          <li><a href="./solar_batteries.html">Solar Batteries</a></li>
+                          <li><a href="./inverters.html">Inverter</a></li>
+                          <li><a href="./lithium_ion _battery.html">Lithium Ion Battery</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-columns">
+                      <h3>Social</h3>
+                      <ul style="padding-left: 0;">
+                          <li><a href="#instagram">Instagram</a></li>
+                          <li><a href="#linkedin">LinkedIn</a></li>
+                          <li><a href="#youtube">YouTube</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
 
-            <!-- Footer Bottom -->
-            <div class="footer-bottoms" style="border-top: .5px solid #a9a9a9">
-                <span>© copyright 2026 FUZE BATTERIES. All Rights Reserved.</span>
-                <a href="#terms">Terms of Service</a>
-                <!-- <a href="#top" class="back-to-tops">Back to top ↑</a> -->
-            </div>
-        </div>
-    </footer>
+          <!-- Footer Bottom -->
+          <div class="footer-bottoms" style="border-top: .5px solid #a9a9a9">
+              <span>© copyright 2026 FUZE BATTERIES. All Rights Reserved.</span>
+              <a href="#terms">Terms of Service</a>
+              <!-- <a href="#top" class="back-to-tops">Back to top ↑</a> -->
+          </div>
+      </div>
+  </footer>
 
-    <!-- ============================================================
-         SECTION 13: JAVASCRIPT FUNCTIONALITY
-         ============================================================ -->
-    <script>
-        // Back to Top Button
-        document.querySelector('.back-to-tops').addEventListener('click', (e) => {
+</div>
+<!-- ============================================================
+     SECTION 13: JAVASCRIPT FUNCTIONALITY
+     ============================================================ -->
+<script>
+    // Back to Top Button
+    const backToTopBtn = document.querySelector('.back-to-tops');
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', (e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+    }
 
-        // Form Submission
-        document.querySelector('form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your submission! We will contact you soon.');
-        });
-    </script>
+    // Form Submission
+    document.querySelector('form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for your submission! We will contact you soon.');
+    });
+</script>
 
-     <!--------------------------------------(footer end)-------------------------------------------->
-    </div>
 
-    <!-- overlay content begin -->
-    <div id="extra-wrap" class="text-light">
-        <div id="btn-close">
-            <span></span>
-            <span></span>
-        </div>
+</div>
 
-        <div id="extra-content">
-            <img src="images/logo-white.webp" class="w-200px" alt="">
-
-            <div class="spacer-30-line"></div>
-
-            <h5>Our Services</h5>
-            <ul class="ul-check">
-                <li>Trucking</li>
-                <li>Air Fright</li>
-                <li>Ship Freight</li>
-                <li>Rail Freight</li>
-                <li>Warehousing</li>
-                <li>Customs Brokerage</li>
-                <li>Last-Mile Delivery</li>
-                <li>Project Cargo</li>
-            </ul>
-
-            <div class="spacer-30-line"></div>
-
-            <h5>Contact Us</h5>
-            <div><i class="icofont-phone me-2 op-5"></i>+929 333 9296</div>
-            <div><i class="icofont-location-pin me-2 op-5"></i>100 S Main St, New York, NY </div>
-            <div><i class="icofont-envelope me-2 op-5"></i>contact@logixpress.com</div>
-
-            <div class="spacer-30-line"></div>
-
-            <h5>About Us</h5>
-            <p>We are a trusted logistics and cargo solutions provider committed to delivering your goods safely,
-                efficiently, and on time. With years of experience in freight forwarding, warehousing, and international
-                shipping.</p>
-
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-            </div>
-        </div>
+        
     </div>
     <!-- overlay content end -->
 
