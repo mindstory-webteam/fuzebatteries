@@ -224,7 +224,7 @@
                             <div class="relative">
                                 <div class="abs bottom-0 end-0 m-5">
                                     <div class="p-4 mb-4 bg-color text-light rounded-1 text-center wow fadeInUp" data-wow-delay=".0s">
-                                        <h1 class="fs-84 mb-1">25</h1>
+                                        <h1 class="fs-84 mb-1">20+</h1>
                                         <div class="fs-16 lh-1-5">Years of Excellence</div>
                                     </div>
                                 </div>
@@ -232,32 +232,136 @@
                             </div>
                         </div>
 
+                    <!-- ══════════════════════════════════════════
+     ABOUT SECTION – with YouTube button
+══════════════════════════════════════════ -->
                     <div class="col-lg-6">
-                        <div class="h-100 relative">
+                    <div class="h-100 relative">
 
-                            <div class="subtitle id-color wow fadeInUp" data-wow-delay=".2s">
-                                About Fuze Batteries
-                            </div>
-
-                            <!-- <h1 class="split" data-wow-delay=".4s">
-                                Powering India with Reliable Energy Solutions
-                            </h1> -->
-
-                            <h1 class="main-heading">
-                                Powering <span class="highlight">India with<br> Reliable Energy<br></span> Solutions.
-                                
-                            </h1>
-
-                            <p style="text-align: justify;">
-                                Fuze is a leading lead-acid battery manufacturing company offering high-performance inverter batteries across India for both domestic and commercial use. Since its establishment in 2012, Fuze has been energizing thousands of homes and offices nationwide with dependable power solutions.
-                            </p>
-
-                            <p style="text-align: justify;">
-                                Built on innovation and dedication, Fuze specializes in revolutionary Tubular Batteries and Solar Batteries designed to meet modern energy demands. Our continuous commitment to quality and customer satisfaction has helped us overcome every challenge and grow into a trusted battery manufacturer in India.
-                            </p>
-
+                        <div class="subtitle id-color wow fadeInUp" data-wow-delay=".2s">
+                        About Fuze Batteries
                         </div>
+
+                        <h1 class="main-heading">
+                        Powering <span class="highlight">India with<br>Reliable Energy<br></span> Solutions.
+                        </h1>
+
+                        <p style="text-align: justify;">
+                        Fuze is a leading lead-acid battery manufacturing company offering high-performance inverter batteries across India for both domestic and commercial use. Since its establishment in 2004, Fuze has been energizing thousands of homes and offices nationwide with dependable power solutions.
+                        </p>
+
+                        <p style="text-align: justify;">
+                        Built on innovation and dedication, Fuze specializes in revolutionary Tubular Batteries and Solar Batteries designed to meet modern energy demands. Our continuous commitment to quality and customer satisfaction has helped us overcome every challenge and grow into a trusted battery manufacturer in India.
+                        </p>
+
+                        <!-- YouTube Button -->
+                        <div style="margin-top:28px;">
+                        <button onclick="openYTModal()" style="
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 12px;
+                            background: #f00b18;
+                            color: #fff;
+                            border: none;
+                            border-radius: 50px;
+                            padding: 12px 26px 12px 16px;
+                            font-size: 15px;
+                            font-weight: 700;
+                            cursor: pointer;
+                            /* box-shadow: 0 6px 20px rgba(220,0,0,0.35); */
+                            transition: background 0.2s, transform 0.2s;
+                        "
+                        onmouseover="this.style.background='#b80000';this.style.transform='translateY(-2px)'"
+                        onmouseout="this.style.background='#f00b18';this.style.transform='translateY(0)'"
+                        >
+                            <!-- Play circle icon -->
+                            <span style="
+                            width:36px; height:36px;
+                            background:#fff;
+                            border-radius:50%;
+                            display:flex; align-items:center; justify-content:center;
+                            flex-shrink:0;
+                            ">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#f00b18">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            </span>
+                            <span>
+                            <!-- <span style="display:block; ">Watch Our Story</span> -->
+                            <span style="display:block; font-size:13px; font-weight:400; opacity:0.85;">Company Overview Video</span>
+                            </span>
+                        </button>
+                        </div>
+
                     </div>
+                    </div>
+
+                    <!-- ══════ YOUTUBE MODAL ══════ -->
+                    <div id="ytModal" onclick="if(event.target===this)closeYTModal()" style="
+                    display:none;
+                    position:fixed; inset:0;
+                    background:rgba(0,0,0,0.85);
+                    backdrop-filter:blur(5px);
+                    z-index:9999;
+                    align-items:center;
+                    justify-content:center;
+                    padding:20px;
+                    ">
+                    <div style="
+                        width:100%; max-width:860px;
+                        background:#111;
+                        border-radius:12px;
+                        overflow:hidden;
+                        box-shadow:0 30px 80px rgba(0,0,0,0.7);
+                    ">
+                        <!-- Modal Header -->
+                        <div style="
+                        display:flex; align-items:center; justify-content:space-between;
+                        padding:13px 18px;
+                        background:#f00b18;
+                        ">
+                        <span style="color:#fff; font-weight:700; letter-spacing:1px; font-size:14px; text-transform:uppercase;">
+                            Fuze Batteries – Our Story
+                        </span>
+                        <button onclick="closeYTModal()" style="
+                            background:rgba(255,255,255,0.2);
+                            border:none; color:#fff;
+                            width:30px; height:30px;
+                            border-radius:50%;
+                            font-size:18px; cursor:pointer;
+                            display:flex; align-items:center; justify-content:center;
+                        ">&times;</button>
+                        </div>
+                        <!-- Video -->
+                        <div style="position:relative; width:100%; padding-top:56.25%; background:#000;">
+                        <iframe id="ytIframe" src="" 
+                            data-src="https://www.youtube.com/embed/zMGeB-0H78Q?si=1T5w-e6DrkvnGadg"
+                            style="position:absolute; inset:0; width:100%; height:100%; border:none;"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+            
+                    </div>
+                    </div>
+
+                    <script>
+                    function openYTModal() {
+                        var modal = document.getElementById('ytModal');
+                        var iframe = document.getElementById('ytIframe');
+                        iframe.src = iframe.getAttribute('data-src');
+                        modal.style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    }
+                    function closeYTModal() {
+                        document.getElementById('ytModal').style.display = 'none';
+                        document.getElementById('ytIframe').src = '';
+                        document.body.style.overflow = '';
+                    }
+                    document.addEventListener('keydown', function(e) {
+                        if (e.key === 'Escape') closeYTModal();
+                    });
+                    </script>
+
 
                     </div>
                 </div>
