@@ -679,313 +679,416 @@
 
 
                 <!-- -----------------------START PRODUCT------------------------------------------->
-                <style>
-                    @import url("https://fonts.googleapis.com/css2?family=Jura:wght@500;600;900&display=swap");
+        <style>
+        @import url("https://fonts.googleapis.com/css2?family=Jura:wght@500;600;900&display=swap");
 
-                    ul.product-plans {
-                        margin-inline: auto;
-                        display: grid;
-                        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                        gap: 2rem;
-                        max-width: 1400px;
-                        padding: 2rem;
-                        list-style: none;
-                    }
+        ul.product-plans {
+            margin-inline: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            padding: 2rem;
+            list-style: none;
+        }
 
-                    @media (min-width: 1200px) {
-                        ul.product-plans {
-                            grid-template-columns: repeat(4, 1fr);
-                        }
-                    }
+        @media (min-width: 1200px) {
+            ul.product-plans {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
 
-                    @media (max-width: 768px) {
-                        ul.product-plans {
-                            grid-template-columns: repeat(2, 1fr);
-                            gap: 1rem;
-                            padding: 1rem;
-                        }
-                    }
+        @media (max-width: 768px) {
+            ul.product-plans {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                padding: 1rem;
+            }
+        }
 
-                    @media (max-width: 480px) {
-                        ul.product-plans {
-                            grid-template-columns: 1fr;
-                        }
-                    }
+        @media (max-width: 480px) {
+            ul.product-plans {
+                grid-template-columns: 1fr;
+            }
+        }
 
-                    ul.product-plans li.product-plan:nth-child(1),
-                    ul.product-plans li.product-plan:nth-child(5) {
-                        --accent-color: #fa0038
-                    }
+        ul.product-plans li.product-plan:nth-child(1),
+        ul.product-plans li.product-plan:nth-child(5) { --accent-color: #fa0038 }
+        ul.product-plans li.product-plan:nth-child(2),
+        ul.product-plans li.product-plan:nth-child(6) { --accent-color: #164fa9 }
+        ul.product-plans li.product-plan:nth-child(3),
+        ul.product-plans li.product-plan:nth-child(7) { --accent-color: #1a9b8b }
+        ul.product-plans li.product-plan:nth-child(4),
+        ul.product-plans li.product-plan:nth-child(8) { --accent-color: #9b1a7e }
 
-                    ul.product-plans li.product-plan:nth-child(2),
-                    ul.product-plans li.product-plan:nth-child(6) {
-                        --accent-color: #164fa9
-                    }
+        ul.product-plans li.product-plan {
+            --overlap-size: 1.5rem;
+            --border-radius: 5rem;
+            width: 100%;
+            padding-block: 2rem;
+            display: grid;
+            grid-template-rows: max-content max-content max-content max-content 1fr max-content;
+            gap: 0.5rem;
+            border-radius: var(--border-radius) 0 var(--border-radius) 0;
+            box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+            background: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-                    ul.product-plans li.product-plan:nth-child(3),
-                    ul.product-plans li.product-plan:nth-child(7) {
-                        --accent-color: #1a9b8b
-                    }
+        ul.product-plans li.product-plan:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.6);
+        }
 
-                    ul.product-plans li.product-plan:nth-child(4),
-                    ul.product-plans li.product-plan:nth-child(8) {
-                        --accent-color: #9b1a7e
-                    }
+        ul.product-plans li.product-plan .image-container {
+            width: 100%;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--accent-color) 0%, rgba(255,255,255,0.3) 100%);
+            border-radius: var(--border-radius) 0 0 0;
+            overflow: hidden;
+            position: relative;
+        }
 
-                    ul.product-plans li.product-plan {
-                        --overlap-size: 1.5rem;
-                        --border-radius: 5rem;
-                        width: 100%;
-                        padding-block: 2rem;
-                        display: grid;
-                        grid-template-rows: max-content max-content max-content max-content 1fr max-content;
-                        gap: 0.5rem;
-                        border-radius: var(--border-radius) 0 var(--border-radius) 0;
-                        box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
-                        background: white;
-                        transition: transform 0.3s ease, box-shadow 0.3s ease;
-                    }
+        ul.product-plans li.product-plan .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
 
-                    ul.product-plans li.product-plan:hover {
-                        transform: translateY(-0.5rem);
-                        box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.6);
-                    }
+        ul.product-plans li.product-plan .title {
+            font-size: 2rem;
+            color: var(--accent-color);
+            text-align: center;
+            font-weight: 900;
+        }
 
-                    ul.product-plans li.product-plan .image-container {
-                        width: 100%;
-                        height: 250px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        background: linear-gradient(135deg, var(--accent-color) 0%, rgba(255, 255, 255, 0.3) 100%);
-                        border-radius: var(--border-radius) 0 0 0;
-                        overflow: hidden;
-                        position: relative;
-                    }
+        ul.product-plans li.product-plan .subtitle {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            padding-inline: 1rem;
+            margin-bottom: 0.5rem;
+        }
 
-                    ul.product-plans li.product-plan .image-container img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        object-position: center;
-                    }
+        ul.product-plans li.product-plan .price {
+            margin-right: calc(var(--overlap-size) * -1);
+            justify-self: end;
+            padding-block: 0.25rem;
+            padding-inline: var(--overlap-size);
+            background-color: var(--accent-color);
+            color: white;
+            position: relative;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
 
-                    ul.product-plans li.product-plan .title {
-                        font-size: 2rem;
-                        color: var(--accent-color);
-                        text-align: center;
-                        font-weight: 900;
-                    }
+        ul.product-plans li.product-plan .price::after {
+            content: "";
+            position: absolute;
+            height: var(--overlap-size);
+            width: var(--overlap-size);
+            right: 0;
+            top: 100%;
+            background-color: inherit;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+        }
 
-                    ul.product-plans li.product-plan .subtitle {
-                        text-align: center;
-                        font-size: 0.9rem;
-                        color: #666;
-                        padding-inline: 1rem;
-                        margin-bottom: 0.5rem;
-                    }
+        ul.product-plans li.product-plan .btn {
+            justify-self: start;
+            margin-left: calc(var(--overlap-size) * -1);
+            padding-block: 0.5rem;
+            padding-inline: 2.5rem;
+            border: none;
+            font-family: inherit;
+            color: white;
+            font-size: 1.1rem;
+            background-color: var(--accent-color);
+            background-image: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.25) 0);
+            background-size: 100% 200%;
+            transition: background-position 100ms ease;
+            position: relative;
+            cursor: pointer;
+            font-weight: 600;
+        }
 
-                    ul.product-plans li.product-plan .price {
-                        margin-right: calc(var(--overlap-size) * -1);
-                        justify-self: end;
-                        padding-block: 0.25rem;
-                        padding-inline: var(--overlap-size);
-                        background-color: var(--accent-color);
-                        color: white;
-                        position: relative;
-                        font-weight: 600;
-                        font-size: 1.2rem;
-                    }
+        ul.product-plans li.product-plan .btn:focus-visible {
+            outline-offset: 5px;
+            outline: 2px solid var(--accent-color);
+            background-position: 0 100%;
+        }
 
-                    ul.product-plans li.product-plan .price::after {
-                        content: "";
-                        position: absolute;
-                        height: var(--overlap-size);
-                        width: var(--overlap-size);
-                        right: 0;
-                        top: 100%;
-                        background-color: inherit;
-                        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-                        clip-path: polygon(0 0, 100% 0, 0 100%);
-                    }
+        ul.product-plans li.product-plan .btn:hover {
+            background-position: 0 100%;
+        }
 
-                    ul.product-plans li.product-plan .btn {
-                        justify-self: start;
-                        margin-left: calc(var(--overlap-size) * -1);
-                        padding-block: 0.5rem;
-                        padding-inline: 2.5rem;
-                        border: none;
-                        font-family: inherit;
-                        color: white;
-                        font-size: 1.1rem;
-                        background-color: var(--accent-color);
-                        background-image: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.25) 0);
-                        background-size: 100% 200%;
-                        transition: background-position 100ms ease;
-                        position: relative;
-                        cursor: pointer;
-                        font-weight: 600;
-                    }
+        ul.product-plans li.product-plan .btn::after {
+            content: "";
+            position: absolute;
+            height: var(--overlap-size);
+            width: var(--overlap-size);
+            left: 0;
+            bottom: 100%;
+            background-color: inherit;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+        }
 
-                    ul.product-plans li.product-plan .btn:focus-visible {
-                        outline-offset: 5px;
-                        outline: 2px solid var(--accent-color);
-                        background-position: 0 100%;
-                    }
+        ul.product-plans li.product-plan .btn:active {
+            transform: scale(0.95);
+        }
 
-                    ul.product-plans li.product-plan .btn:hover {
-                        background-position: 0 100%;
-                    }
+        ul.product-plans li.product-plan .btn:active::after {
+            transform-origin: left bottom;
+            transform: scale(0.9);
+        }
 
-                    ul.product-plans li.product-plan .btn::after {
-                        content: "";
-                        position: absolute;
-                        height: var(--overlap-size);
-                        width: var(--overlap-size);
-                        left: 0;
-                        bottom: 100%;
-                        background-color: inherit;
-                        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-                        clip-path: polygon(100% 0, 100% 100%, 0 100%);
-                    }
+        ul.product-plans li.product-plan .features {
+            align-self: flex-start;
+            list-style: none;
+            padding-inline: 2rem;
+            display: grid;
+        }
 
-                    ul.product-plans li.product-plan .btn:active {
-                        transform: scale(0.95);
-                    }
+        ul.product-plans li.product-plan .features li:not(:first-child) {
+            border-top: 1px solid rgb(200, 200, 200);
+        }
 
-                    ul.product-plans li.product-plan .btn:active::after {
-                        transform-origin: left bottom;
-                        transform: scale(0.9);
-                    }
+        ul.product-plans li.product-plan .features li {
+            padding: 0.5rem;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 1rem 1fr;
+            font-size: 0.9rem;
+        }
 
-                    ul.product-plans li.product-plan .features {
-                        align-self: flex-start;
-                        list-style: none;
-                        padding-inline: 2rem;
-                        display: grid;
-                    }
+        ul.product-plans li.product-plan .features li::before {
+            font-family: "Font Awesome 6 Pro";
+            font-weight: 900;
+            display: grid;
+            place-items: center;
+        }
 
-                    ul.product-plans li.product-plan .features li:not(:first-child) {
-                        border-top: 1px solid rgb(200, 200, 200);
-                    }
+        ul.product-plans li.product-plan .features li.check::before {
+            content: "\2713";
+            color: green;
+            font-size: 1.2rem;
+        }
 
-                    ul.product-plans li.product-plan .features li {
-                        padding: 0.5rem;
-                        display: grid;
-                        gap: 1rem;
-                        grid-template-columns: 1rem 1fr;
-                        font-size: 0.9rem;
-                    }
+        ul.product-plans li.product-plan .features li.cross::before {
+            content: "\d7";
+            color: red;
+            font-size: 1.4rem;
+        }
 
-                    ul.product-plans li.product-plan .features li::before {
-                        font-family: "Font Awesome 6 Pro";
-                        font-weight: 900;
-                        display: grid;
-                        place-items: center;
-                    }
+        .header-section {
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-bottom: 0px;
+        }
 
-                    ul.product-plans li.product-plan .features li.check::before {
-                        content: "\2713";
-                        color: green;
-                        font-size: 1.2rem;
-                    }
+        .main-heading {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin: 0;
+        }
 
-                    ul.product-plans li.product-plan .features li.cross::before {
-                        content: "\d7";
-                        color: red;
-                        font-size: 1.4rem;
-                    }
+        .highlight {
+            color: #fa0038;
+        }
+    </style>
+                    <!-- ul-1 ---------------------------------------------------->
 
-                    .header-section {
-                        text-align: center;
-                        padding: 2rem 1rem;
-                        margin-bottom: 0px;
-                    }
-
-                    .main-heading {
-                        font-size: clamp(1.5rem, 4vw, 2.5rem);
-                        margin: 0;
-                    }
-
-                    .highlight {
-                        color: #fa0038;
-                    }
-                </style>
-            <div class="header-section">
-                <h1 class="main-heading">
-                    FUZE <span class="highlight">Next-Gen</span> Lithium Power Solutions
-                </h1>
-            </div>
+                <div class="header-section">
+                    <h1 class="main-heading">
+                        FUZE <span class="highlight">Next-Gen</span> Lithium In- Built Batteries
+                    </h1>
+                </div>
 
                 <ul class="product-plans">
 
-    <!-- Li-UPS 1100 / 12V -->
-    <li class="product-plan">
-        <div class="image-container">
-            <img src="./images/products/lithium-battery/lithium-battery-2.jpg" alt="Li-UPS 1100 / 12V">
-        </div>
+                    <!-- 1400 UPS -->
+                    <li class="product-plan">
+                        <div class="image-container">
+                            <img src="./images/products/lithium-battery/lithium-battery-2.jpg" alt="1400 UPS">
+                        </div>
 
-        <div class="title">Li+UPS 5000</div>
-        <div class="subtitle">Wall Mounted Lithium-Ion UPS</div>
-        <div class="price">1000 VA / 12V</div>
+                        <div class="title">Li+UPS 1400</div>
+                        <div class="subtitle">Lithium In-Built Battery UPS</div>
+                        <div class="price">1400 UPS / 12.8V</div>
 
-        <ul class="features">
-            <li class="check">Rated Voltage : 12.8V</li>
-            <li class="check">Battery Capacity : 100Ah</li>
-            <li class="check">Rated Energy : 1280 Wh</li>
-            <li class="check">Charging Current : 25A</li>
-            <li class="check">Charging Time : ~4 hrs 30 mins</li>
-            <li class="check">Depth of Discharge : 80%</li>
-        </ul>
+                        <ul class="features">
+                            <li class="check">Capacity : 100Ah</li>
+                            <li class="check">Voltage : 12.8V</li>
+                            <li class="check">Max. Load : 800W</li>
+                            <li class="check">Backup @ 400W : 4 hrs</li>
+                            <li class="check">Warranty : 5 Yrs Replacement</li>
+                            <li class="check">Suitable for Solar : Yes</li>
+                        </ul>
+                    </li>
 
-        <!-- <button class="btn">Call</button> -->
-    </li>
+                    <!-- 2.5 KVA -->
+                    <li class="product-plan">
+                        <div class="image-container">
+                            <img src="./images/products/lithium-battery/lithium-battery-3.jpg" alt="2.5 KVA">
+                        </div>
 
-    <!-- Li-UPS 1100 / 12V (Inbuilt Battery) -->
-    <li class="product-plan">
-        <div class="image-container">
-            <img src="./images/products/lithium-battery/lithium-battery-new1.png" alt="Li-UPS 1100 Inbuilt Battery">
-        </div>
+                        <div class="title">Li+UPS 2500</div>
+                        <div class="subtitle">Lithium In-Built Battery UPS</div>
+                        <div class="price">2.5 KVA / 25.6V</div>
 
-        <!-- <div class="title">Li-UPS 1100</div>
-        <div class="subtitle">Inbuilt Lithium-Ion Battery</div> -->
-        <div class="price"></div>
+                        <ul class="features">
+                            <li class="check">Capacity : 100Ah</li>
+                            <li class="check">Voltage : 25.6V</li>
+                            <li class="check">Max. Load : 1800W</li>
+                            <li class="check">Backup @ 400W : 6 hrs 20 mins</li>
+                            <li class="check">Warranty : 5 Yrs Replacement</li>
+                            <li class="check">Suitable for Solar : Yes</li>
+                        </ul>
+                    </li>
 
-        <!-- <ul class="features">
-            <li class="check">Cells Configuration : 4S1P</li>
-            <li class="check">Cut-off Voltage : 11.8 – 13.8V</li>
-            <li class="check">Discharge Current : 65A</li>
-            <li class="check">Charging Mode : CC–CV</li>
-            <li class="check">Zero Maintenance</li>
-            <li class="check">Wall Mounted Design</li>
-        </ul> -->
+                    <!-- 5 KVA -->
+                    <li class="product-plan">
+                        <div class="image-container">
+                            <img src="./images/products/lithium-battery/lithium-battery-3.jpg" alt="5 KVA">
+                        </div>
 
-        <!-- <button class="btn">Call</button> -->
-    </li>
+                        <div class="title">Li+UPS 5000</div>
+                        <div class="subtitle">High-Capacity Lithium In-Built Battery UPS</div>
+                        <div class="price">5 KVA / 51.2V</div>
 
-    <!-- Li-UPS 5000 / 48V -->
-    <li class="product-plan">
-        <div class="image-container">
-            <img src="./images/products/lithium-battery/lithium-battery-3.jpg" alt="Li-UPS 5000 / 48V">
-        </div>
+                        <ul class="features">
+                            <li class="check">Capacity : 100Ah</li>
+                            <li class="check">Voltage : 51.2V</li>
+                            <li class="check">Max. Load : 4000W</li>
+                            <li class="check">Backup @ 400W : 13 hrs</li>
+                            <li class="check">Warranty : 5 Yrs Replacement</li>
+                            <li class="check">Suitable for Solar : Yes</li>
+                        </ul>
+                    </li>
 
-        <div class="title">Li+UPS 2500</div>
-        <div class="subtitle">High-Capacity Lithium-Ion UPS</div>
-        <div class="price">5 kVA / 48V</div>
+                </ul>
 
-        <ul class="features">
-            <li class="check">Rated Voltage : 51.2V</li>
-            <li class="check">Battery Capacity : 100Ah</li>
-            <li class="check">Rated Energy : 4.8 kWh</li>
-            <li class="check">Full Load Power : 4000 W</li>
-            <li class="check">Cells Configuration : 15S1P</li>
-            <li class="check">Depth of Discharge : 80%</li>
-        </ul>
+                <!-- ul-2 ---------------------------------------------------------->
 
-        <!-- <button class="btn">Call</button> -->
-    </li>
+                
+                    <div class="header-section">
+    <h1 class="main-heading">
+        FUZE <span class="highlight">Next-Gen</span> Lithium Power Solutions
+    </h1>
+                    </div>
 
-</ul>
+                    <ul class="product-plans">
+
+                        <!-- 12.8V / 100AH -->
+                        <li class="product-plan">
+                            <div class="image-container">
+                                <img src="./images/products/lithium-battery/lithium-battery-2.jpg" alt="Li-UPS 1100 / 12V">
+                            </div>
+
+                            <div class="title">Li+UPS 1000</div>
+                            <div class="subtitle">Wall Mounted Lithium-Ion UPS</div>
+                            <div class="price">12.8V / 100AH</div>
+
+                            <ul class="features">
+                                <li class="check">Rated Voltage : 12.8V</li>
+                                <li class="check">Battery Capacity : 100Ah</li>
+                                <li class="check">Upper Cut Off : 14.6V</li>
+                                <li class="check">Lower Cut Off : 10.6V</li>
+                                <li class="check">Suitable for Solar : Yes</li>
+                                <li class="check">Backup @ 400W : 3 hrs 10 mins</li>
+                                <li class="check">Warranty : 5 Years</li>
+                            </ul>
+                        </li>
+
+                        <!-- 12.8V / 150AH -->
+                        <li class="product-plan">
+                            <div class="image-container">
+                                <img src="./images/products/lithium-battery/lithium-battery-new1.png" alt="Li-UPS 150AH">
+                            </div>
+
+                            <div class="title">Li+UPS 1500</div>
+                            <div class="subtitle">Wall Mounted Lithium-Ion UPS</div>
+                            <div class="price">12.8V / 150AH</div>
+
+                            <ul class="features">
+                                <li class="check">Rated Voltage : 12.8V</li>
+                                <li class="check">Battery Capacity : 150Ah</li>
+                                <li class="check">Upper Cut Off : 14.6V</li>
+                                <li class="check">Lower Cut Off : 10.6V</li>
+                                <li class="check">Suitable for Solar : Yes</li>
+                                <li class="check">Backup @ 400W : 4 hrs 45 mins</li>
+                                <li class="check">Warranty : 5 Years</li>
+                            </ul>
+                        </li>
+
+                        <!-- 12.8V / 200AH -->
+                        <li class="product-plan">
+                            <div class="image-container">
+                                <img src="./images/products/lithium-battery/lithium-battery-2.jpg" alt="Li-UPS 200AH">
+                            </div>
+
+                            <div class="title">Li+UPS 2000</div>
+                            <div class="subtitle">High-Capacity Lithium-Ion UPS</div>
+                            <div class="price">12.8V / 200AH</div>
+
+                            <ul class="features">
+                                <li class="check">Rated Voltage : 12.8V</li>
+                                <li class="check">Battery Capacity : 200Ah</li>
+                                <li class="check">Upper Cut Off : 14.6V</li>
+                                <li class="check">Lower Cut Off : 10.6V</li>
+                                <li class="check">Suitable for Solar : Yes</li>
+                                <li class="check">Backup @ 400W : 7 hrs</li>
+                                <li class="check">Warranty : 5 Years</li>
+                            </ul>
+                        </li>
+
+                        <!-- 25.6V / 100AH -->
+                        <li class="product-plan">
+                            <div class="image-container">
+                                <img src="./images/products/lithium-battery/lithium-battery-3.jpg" alt="Li-UPS 25.6V">
+                            </div>
+
+                            <div class="title">Li+UPS 2500</div>
+                            <div class="subtitle">High-Capacity Lithium-Ion UPS</div>
+                            <div class="price">25.6V / 100AH</div>
+
+                            <ul class="features">
+                                <li class="check">Rated Voltage : 25.6V</li>
+                                <li class="check">Battery Capacity : 100Ah</li>
+                                <li class="check">Upper Cut Off : 29.2V</li>
+                                <li class="check">Lower Cut Off : 21.2V</li>
+                                <li class="check">Suitable for Solar : Yes</li>
+                                <li class="check">Backup @ 400W : 6 hrs 20 mins</li>
+                                <li class="check">Warranty : 5 Years</li>
+                            </ul>
+                        </li>
+
+                        <!-- 51.2V / 100AH -->
+                        <li class="product-plan">
+                            <div class="image-container">
+                                <img src="./images/products/lithium-battery/lithium-battery-3.jpg" alt="Li-UPS 51.2V">
+                            </div>
+
+                            <div class="title">Li+UPS 5000</div>
+                            <div class="subtitle">High-Capacity Lithium-Ion UPS</div>
+                            <div class="price">51.2V / 100AH</div>
+
+                            <ul class="features">
+                                <li class="check">Rated Voltage : 51.2V</li>
+                                <li class="check">Battery Capacity : 100Ah</li>
+                                <li class="check">Upper Cut Off : 58.4V</li>
+                                <li class="check">Lower Cut Off : 42.4V</li>
+                                <li class="check">Suitable for Solar : Yes</li>
+                                <li class="check">Backup @ 400W : 13 hrs</li>
+                                <li class="check">Warranty : 5 Years</li>
+                            </ul>
+                        </li>
+
+                    </ul>
 
 
 
